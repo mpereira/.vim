@@ -124,14 +124,14 @@ else
 endif
 
 " commands overview
-" F1     - Vim help
-" F2     - FuzzyFinder
-" F4     - remove trailing whitespaces
-" F5     - Toggle paste mode
-" F8     - Copy selection to clipboard
-" F11    - Toggle NERD tree
-" <S-F8> - paste contents from the X server register
-" <C-L>  - redraws the screen
+" F2           - open FuzzyFinder
+" F4           - remove trailing whitespaces
+" F5           - toggle paste mode
+" F8           - copy selection to clipboard
+" F11          - toggle NERD tree
+" shift-insert - same as middle mouse button
+" shift-F8     - paste contents from the X server register
+" control-l    - redraw the screen
 
 " filetypes
 autocmd BufRead,BufNewFile Rakefile   set filetype=ruby
@@ -174,7 +174,11 @@ set viminfo='10,\"30,:20,%,n~/.viminfo
 " cursor at the same position as it were on last edit
 au BufReadPost * if line("'\"")|execute("normal `\"")|endif
 
-" make <c-l> clear the highlights as well as redraw the screen
+" make shift-insert work like in xterm
+map <S-Insert> <MiddleMouse>
+map! <S-Insert> <MiddleMouse>
+
+" make control-l clear the highlights as well as redraw the screen
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
