@@ -11,3 +11,8 @@ Plugins used:
   vim-cucumber  (http://github.com/tpope/vim-cucumber)
   vim-repeat    (http://github.com/tpope/vim-repeat)
   matchit       (http://www.vim.org/scripts/script.php?script_id=39)
+
+Usage
+Clone this repo into your home directory as .vim.
+
+Also, put "source ~/.vim/vimrc" (without the quotes) inside the .vimrc in your home directory.
