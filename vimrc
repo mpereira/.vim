@@ -29,6 +29,7 @@ set autochdir           " automatically cd into the directory the file is
 set ttyfast             " tell vim that our terminal is fast
 set novisualbell        " don't blink
 set noerrorbells        " no noise
+set cursorline          " line highlighting
 set scrolloff=3         " minimal number of lines above and below the cursor
 set directory=~/tmp     " swap files location
 set autowrite           " flush external changes on open files
@@ -98,21 +99,13 @@ set backspace=indent,eol,start
 " store lots of :cmdline history
 set history=1000
 
-" line highlighting
-set cursorline
-
 " some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
 
-" tell the term has 256 colors
-set t_Co=256
-
-" syntax highlighting
-syntax on
-
 " display settings
-set lines=45
+set t_Co=256     " tell the term has 256 colors
+syntax on        " syntax highlighting
 set columns=84
 
 " GUI options
