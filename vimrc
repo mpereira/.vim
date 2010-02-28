@@ -31,7 +31,7 @@ set novisualbell        " don't blink
 set noerrorbells        " no noise
 set cursorline          " line highlighting
 set scrolloff=3         " minimal number of lines above and below the cursor
-set directory=~/tmp     " swap files location
+set directory=~/.tmp    " swap files location
 set autowrite           " flush external changes on open files
 set laststatus=2        " show status line
 
@@ -106,7 +106,7 @@ set ttymouse=xterm2
 " display settings
 set t_Co=256     " tell the term has 256 colors
 syntax on        " syntax highlighting
-set columns=84
+set columns=85
 
 " GUI options
 if has("gui_running")
