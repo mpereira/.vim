@@ -1,0 +1,13 @@
+My personal vimfiles, crafted carefully with time.
+
+Plugins used:
+  vim-rails     (http://github.com/tpope/vim-rails)
+  nerdtree      (http://github.com/scrooloose/nerdtree)
+  nerdcommenter (http://github.com/scrooloose/nerdcommenter)
+  fuzzyfinder   (http://www.vim.org/scripts/script.php?script_id=1984)
+  snipmate.vim  (http://github.com/msanders/snipmate.vim)
+  syntastic     (http://github.com/scrooloose/syntastic)
+  vim-surround  (http://github.com/tpope/vim-surround)
+  vim-cucumber  (http://github.com/tpope/vim-cucumber)
+  vim-repeat    (http://github.com/tpope/vim-repeat)
+  matchit       (http://www.vim.org/scripts/script.php?script_id=39)
