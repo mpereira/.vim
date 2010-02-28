@@ -2,6 +2,7 @@ My personal vimfiles, crafted carefully with time.
 
 Plugins used:
   vim-rails     (http://github.com/tpope/vim-rails)
+  vim-ruby      (http://github.com/vim-ruby/vim-ruby)
   nerdtree      (http://github.com/scrooloose/nerdtree)
   nerdcommenter (http://github.com/scrooloose/nerdcommenter)
   fuzzyfinder   (http://www.vim.org/scripts/script.php?script_id=1984)
@@ -18,3 +19,8 @@ mv .vim .vim_old
 git clone git://github.com/murilasso/vimfiles ~/.vim
 
 Also, put "source ~/.vim/vimrc" (without the quotes) inside the .vimrc in your home directory.
+
+Notes
+To make vim-ruby's completions (among other stuff) work, vim must be compiled with ruby support.
+
+To check if you vim has ruby support type `vim --version |grep ruby` in your terminal. If the output contains '+ruby' you're good to go.
