@@ -1,5 +1,3 @@
-" ~/.vimrc
-
 set nocompatible        " disable vi compatibility
 
 set encoding=utf-8
@@ -132,6 +130,38 @@ else
   colorscheme candycode
 endif
 
+" commands overview
+" F1     - Vim help
+" F2     - FuzzyFinder
+" F4     - remove trailing whitespaces
+" F5     - Toggle paste mode
+" F8     - Copy selection to clipboard
+" F11    - Toggle NERD tree
+" <S-F8> - paste contents from the X server register
+" <C-L>  - redraws the screen
+
+" filetypes
+autocmd BufRead,BufNewFile Rakefile   set filetype=ruby
+autocmd BufRead,BufNewFile rakefile   set filetype=ruby
+autocmd BufRead,BufNewFile *.rake     set filetype=ruby
+autocmd BufRead,BufNewFile .irbrc     set filetype=ruby
+autocmd BufRead,BufNewFile *.rjs      set filetype=ruby
+autocmd BufRead,BufNewFile *.rhtml    set filetype=eruby
+autocmd BufRead,BufNewFile *.html.erb set filetype=eruby
+
+" omni completion
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType python     set omnifunc=pythoncomplete#Complete
+autocmd FileType c          set omnifunc=ccomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html       set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css        set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml        set omnifunc=xmlcomplete#CompleteTags
+
+" aliases
+iab msp Murilo Soares Pereira
+iab @@ murilo.soares3@gmail.com
+
 " vim-ruby options
 compiler ruby                " enable compiler support for ruby
 let g:rubycomplete_rails = 1 " load rails environment for rails project's files
@@ -151,12 +181,16 @@ set viminfo='10,\"30,:20,%,n~/.viminfo
 " cursor at the same position as it were on last edit
 au BufReadPost * if line("'\"")|execute("normal `\"")|endif
 
-" make <c-l> clear the highlight as well as redraw
+" make <c-l> clear the highlights as well as redraw the screen
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
 " removes all trailing whitespaces from the file
 nnoremap <silent> <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+" toggles paste mode
+nmap <F5> :call TogglePasteMode()<cr>
+imap <F5> <c-o><F5>
 
 " copy line to X server register
 vmap <F8> :!xclip -f -sel clip<CR>
@@ -176,32 +210,6 @@ function! SetCursorPosition()
   end
 endfunction
 
-" aliases
-iab msp Murilo Soares Pereira
-iab @@ murilo.soares3@gmail.com
-
-" filetypes
-autocmd BufRead,BufNewFile Rakefile   set filetype=ruby
-autocmd BufRead,BufNewFile rakefile   set filetype=ruby
-autocmd BufRead,BufNewFile *.rake     set filetype=ruby
-autocmd BufRead,BufNewFile .irbrc     set filetype=ruby
-autocmd BufRead,BufNewFile *.rjs      set filetype=ruby
-autocmd BufRead,BufNewFile *.rhtml    set filetype=eruby
-autocmd BufRead,BufNewFile *.html.erb set filetype=eruby
-
-" commands
-" F1     - Vim help
-" F2     - FuzzyFinder
-" F4     - remove trailing whitespaces
-" F5     - Toggle paste mode
-" F8     - Copy selection to clipboard
-" F11    - Toggle NERD tree
-" <S-F8> - paste contents from the X server register
-" <C-L>  - redraws the screen
-
-nmap <F5> :call TogglePasteMode()<cr>
-imap <F5> <c-o><F5>
-
 function TogglePasteMode ()
   if (&paste)
     set nopaste
@@ -211,15 +219,6 @@ function TogglePasteMode ()
     echo
   endif
 endfunction
-
-" omni completion
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType python     set omnifunc=pythoncomplete#Complete
-autocmd FileType c          set omnifunc=ccomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html       set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css        set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml        set omnifunc=xmlcomplete#CompleteTags
 
 " define :Lorem command to dump in a paragraph of lorem ipsum
 command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
