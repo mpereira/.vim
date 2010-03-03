@@ -12,6 +12,7 @@ Plugins used:
   vim-cucumber  (http://github.com/tpope/vim-cucumber)
   vim-repeat    (http://github.com/tpope/vim-repeat)
   matchit       (http://www.vim.org/scripts/script.php?script_id=39)
+  gist-vim      (http://github.com/mattn/gist-vim)
 
 Installation
 cd
