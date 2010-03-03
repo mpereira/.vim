@@ -167,7 +167,6 @@ map <F11> :NERDTreeToggle<CR>
 
 " syntastic options
 let g:syntastic_enable_signs=1   " points error lines with arrows
-let g:syntastic_auto_loc_list=1  " open the error buffer automatically
 
 " keeping history data
 set viminfo='10,\"30,:20,%,n~/.viminfo
