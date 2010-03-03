@@ -24,4 +24,4 @@ Also, put "source ~/.vim/vimrc" (without the quotes) inside the .vimrc in your h
 Notes
 To make vim-ruby's completions (among other stuff) work, vim must be compiled with ruby support.
 
-To check if you vim has ruby support type `vim --version |grep ruby` in your terminal. If the output contains '+ruby' you're good to go.
+To check if you vim has ruby support type `vim --version |grep ruby` in your terminal. If the output contains '+ruby' you're good to go. If not, you must compile vim with ruby support.
