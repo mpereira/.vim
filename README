@@ -13,6 +13,7 @@ Plugins used:
   vim-repeat    (http://github.com/tpope/vim-repeat)
   matchit       (http://www.vim.org/scripts/script.php?script_id=39)
   gist-vim      (http://github.com/mattn/gist-vim)
+  c.vim         (http://www.vim.org/scripts/script.php?script_id=213)
 
 Installation
 cd
