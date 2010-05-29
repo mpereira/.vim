@@ -158,6 +158,9 @@ autocmd FileType xml        set omnifunc=xmlcomplete#CompleteTags
 iab msp Murilo Soares Pereira
 iab @@ murilo.soares3@gmail.com
 
+" map leader to ,
+let g:mapleader = ","
+
 " vim-ruby options
 compiler ruby                " enable compiler support for ruby
 let g:rubycomplete_rails = 1 " load rails environment for rails project's files
@@ -168,8 +171,8 @@ let g:gist_detect_filetype = 1                "detecting filetype by name
 let g:gist_open_browser_after_post = 1        "opens browser after the post
 let g:gist_browser_command = 'chromium %URL%' "chromium is my browser
 
-" FuzzyFinder
-map <F2> :FufFile<CR>
+" Command-T
+nmap <silent> <Leader>t :CommandT<CR>
 
 " NERDTree
 map <F11> :NERDTreeToggle<CR>
