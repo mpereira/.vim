@@ -28,3 +28,6 @@
 [submodule "bundle/gist-vim"]
 	path = bundle/gist-vim
 	url = git://github.com/mattn/gist-vim
+[submodule "bundle/Command-T"]
+	path = bundle/Command-T
+	url = git://github.com/wincent/Command-T.git
