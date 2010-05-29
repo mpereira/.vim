@@ -85,9 +85,12 @@ cab WQ wq
 cab Q  q
 
 " enable filetype detection
-filetype on
+filetype off
 filetype plugin on
 filetype plugin indent on
+
+" load pathogen
+call pathogen#runtime_append_all_bundles()
 
 " display tabs and trailing spaces
 set list

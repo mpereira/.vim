@@ -1,0 +1,30 @@
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = git://github.com/tpope/vim-rails
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter
+[submodule "bundle/snipmate.vim"]
+	path = bundle/snipmate.vim
+	url = git://github.com/msanders/snipmate.vim
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git://github.com/scrooloose/syntastic
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = git://github.com/tpope/vim-surround
+[submodule "bundle/vim-cucumber"]
+	path = bundle/vim-cucumber
+	url = git://github.com/tpope/vim-cucumber
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat
+[submodule "bundle/gist-vim"]
+	path = bundle/gist-vim
+	url = git://github.com/mattn/gist-vim
