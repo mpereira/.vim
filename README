@@ -10,6 +10,7 @@ Plugins used:
   snipmate.vim  (http://github.com/msanders/snipmate.vim)
   syntastic     (http://github.com/scrooloose/syntastic)
   vim-cucumber  (http://github.com/tpope/vim-cucumber)
+  vim-fugitive  (http://github.com/tpope/vim-fugitive)
   vim-pathogen  (http://github.com/tpope/vim-pathogen)
   vim-rails     (http://github.com/tpope/vim-rails)
   vim-ragtag    (http://github.com/tpope/vim-ragtag)
