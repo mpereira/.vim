@@ -1,6 +1,7 @@
 My personal vimfiles, crafted carefully with time.
 
 Plugins used:
+  ack.vim       (http://github.com/mileszs/ack.vim)
   c.vim         (http://www.vim.org/scripts/script.php?script_id=213)
   Command-T     (http://github.com/wincent/Command-T)
   gist-vim      (http://github.com/mattn/gist-vim)
@@ -33,4 +34,6 @@ To make vim-ruby's completions (among other stuff) work, vim must be compiled wi
 
 To check if you vim has ruby support type `vim --version |grep ruby` in your terminal. If the output contains '+ruby' you're good to go. If not, you must compile vim with ruby support.
 
-Also, to make gist-vim work, you need to set your github token in gitconfig.
+Make sure you have ack installed in your system, in order to the ack.vim plugin works.
+
+To make gist-vim work, you need to set your github token in gitconfig.
