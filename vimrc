@@ -113,7 +113,7 @@ set columns=85
 
 " GUI options
 if has("gui_running")
-  colorscheme vividchalk
+  colorscheme molokai
   set guifont=Monaco\ 9
   set guioptions-=T          " no toolbar
   set guioptions-=m          " no menu
