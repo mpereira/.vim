@@ -1,24 +1,28 @@
 My personal vimfiles, crafted carefully with time.
 
 Plugins used:
-  vim-rails     (http://github.com/tpope/vim-rails)
-  vim-ruby      (http://github.com/vim-ruby/vim-ruby)
-  nerdtree      (http://github.com/scrooloose/nerdtree)
+  c.vim         (http://www.vim.org/scripts/script.php?script_id=213)
+  Command-T     (http://github.com/wincent/Command-T)
+  gist-vim      (http://github.com/mattn/gist-vim)
+  matchit       (http://www.vim.org/scripts/script.php?script_id=39)
   nerdcommenter (http://github.com/scrooloose/nerdcommenter)
-  fuzzyfinder   (http://www.vim.org/scripts/script.php?script_id=1984)
+  nerdtree      (http://github.com/scrooloose/nerdtree)
   snipmate.vim  (http://github.com/msanders/snipmate.vim)
   syntastic     (http://github.com/scrooloose/syntastic)
-  vim-surround  (http://github.com/tpope/vim-surround)
   vim-cucumber  (http://github.com/tpope/vim-cucumber)
+  vim-pathogen  (http://github.com/tpope/vim-pathogen)
+  vim-rails     (http://github.com/tpope/vim-rails)
   vim-repeat    (http://github.com/tpope/vim-repeat)
-  matchit       (http://www.vim.org/scripts/script.php?script_id=39)
-  gist-vim      (http://github.com/mattn/gist-vim)
-  c.vim         (http://www.vim.org/scripts/script.php?script_id=213)
+  vim-ruby      (http://github.com/vim-ruby/vim-ruby)
+  vim-surround  (http://github.com/tpope/vim-surround)
 
 Installation
 cd
 mv .vim .vim_old
 git clone git://github.com/murilasso/vimfiles ~/.vim
+cd ~/.vim
+git submodule init
+git submodule update
 
 Also, put "source ~/.vim/vimrc" (without the quotes) inside the .vimrc in your home directory.
 
@@ -26,3 +30,5 @@ Notes
 To make vim-ruby's completions (among other stuff) work, vim must be compiled with ruby support.
 
 To check if you vim has ruby support type `vim --version |grep ruby` in your terminal. If the output contains '+ruby' you're good to go. If not, you must compile vim with ruby support.
+
+Also, to make gist-vim work, you need to set your github token in gitconfig.
