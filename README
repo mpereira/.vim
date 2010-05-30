@@ -20,12 +20,18 @@ Plugins used:
   vim-surround  (http://github.com/tpope/vim-surround)
 
 Installation
-cd
-mv .vim .vim_old
-git clone git://github.com/murilasso/vimfiles ~/.vim
-cd ~/.vim
-git submodule init
-git submodule update
+# checking out the repository as your vim directory
+  cd
+  mv .vim .vim_old
+  git clone git://github.com/murilasso/vimfiles ~/.vim
+# checking out all the plugins
+  cd ~/.vim
+  git submodule init
+  git submodule update
+# installing Command-T C extensions
+  cd bundle/Command-T/ruby/command-t
+  ruby extconf.rb
+  make
 
 Also, put "source ~/.vim/vimrc" (without the quotes) inside the .vimrc in your home directory.
 
