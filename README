@@ -13,6 +13,7 @@ Plugins used:
   vim-cucumber  (http://github.com/tpope/vim-cucumber)
   vim-fugitive  (http://github.com/tpope/vim-fugitive)
   vim-pathogen  (http://github.com/tpope/vim-pathogen)
+  vim-rake      (http://github.com/tpope/vim-rake)
   vim-rails     (http://github.com/tpope/vim-rails)
   vim-ragtag    (http://github.com/tpope/vim-ragtag)
   vim-repeat    (http://github.com/tpope/vim-repeat)
