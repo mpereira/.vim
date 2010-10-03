@@ -5,6 +5,7 @@ Plugins used:
   c.vim         (http://www.vim.org/scripts/script.php?script_id=213)
   Command-T     (http://github.com/wincent/Command-T)
   gist-vim      (http://github.com/mattn/gist-vim)
+  ledger.vim    (http://www.vim.org/scripts/download_script.php?src_id=3694)
   matchit       (http://www.vim.org/scripts/script.php?script_id=39)
   nerdcommenter (http://github.com/scrooloose/nerdcommenter)
   nerdtree      (http://github.com/scrooloose/nerdtree)
