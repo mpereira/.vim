@@ -145,6 +145,7 @@ autocmd BufRead,BufNewFile *.rjs      set filetype=ruby
 autocmd BufRead,BufNewFile *.rhtml    set filetype=eruby
 autocmd BufRead,BufNewFile *.html.erb set filetype=eruby
 autocmd BufRead,BufNewFile *.ldg      set filetype=ledger
+autocmd BufRead,BufNewFile *.feature  set filetype=cucumber
 
 " omni completion
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
