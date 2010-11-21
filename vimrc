@@ -107,13 +107,12 @@ set mouse=a
 set ttymouse=xterm2
 
 " display settings
-set t_Co=256     " tell the term has 256 colors
-syntax on        " syntax highlighting
+syntax on           " syntax highlighting
+colorscheme fruity
 set columns=85
 
 " GUI options
 if has("gui_running")
-  colorscheme molokai
   set guifont=Monaco\ 9
   set guioptions-=T          " no toolbar
   set guioptions-=m          " no menu
@@ -122,8 +121,6 @@ if has("gui_running")
   set guioptions+=c          " console messages rather than GUI dialogs
   set guicursor+=a:blinkon0  " no cursor blinking
   set mousehide              " hide mouse when start typing
-else
-  colorscheme candycode
 endif
 
 " commands overview
