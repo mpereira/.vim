@@ -107,7 +107,8 @@ set mouse=a
 set ttymouse=xterm2
 
 " display settings
-syntax on           " syntax highlighting
+set t_Co=88
+syntax on
 colorscheme fruity
 set columns=85
 
