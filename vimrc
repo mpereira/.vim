@@ -84,13 +84,13 @@ cab wQ wq
 cab WQ wq
 cab Q  q
 
-" enable filetype detection
+" load pathogen
 filetype off
+call pathogen#runtime_append_all_bundles()
+
+" enable filetype detection
 filetype plugin on
 filetype plugin indent on
-
-" load pathogen
-call pathogen#runtime_append_all_bundles()
 
 " display tabs and trailing spaces
 set list
@@ -171,11 +171,17 @@ let g:gist_detect_filetype = 1                "detecting filetype by name
 let g:gist_open_browser_after_post = 1        "opens browser after the post
 let g:gist_browser_command = 'chromium %URL%' "chromium is my browser
 
+" Mappings
+nnoremap Y  y$  " yank from cursor to EOL
+if exists(":nohls")
+  nnoremap <silent> <C-L> :nohls<CR><C-L>
+endif
+
 " Command-T
 nmap <silent> <Leader>t :CommandT<CR>
 
 " NERDTree
-map <F11> :NERDTreeToggle<CR>
+nmap <silent> <Leader>n :NERDTreeToggle<CR>
 
 " syntastic options
 let g:syntastic_enable_signs=1   " points error lines with arrows
@@ -190,9 +196,7 @@ map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
 
 " make control-l clear the highlights as well as redraw the screen
-nnoremap <C-L> :nohls<CR><C-L>
-inoremap <C-L> <C-O>:nohls<CR>
-
+"
 " removes all trailing whitespaces from the file
 nnoremap <silent> <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
