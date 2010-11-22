@@ -1,4 +1,14 @@
+" load pathogen
+filetype off
+call pathogen#runtime_append_all_bundles()
+
+" enable filetype detection
+filetype plugin on
+filetype plugin indent on
+
 set nocompatible        " disable vi compatibility
+
+set modelines=0         " disable modelines (prevents a security exploit)
 
 set encoding=utf-8
 set fileencoding=utf-8
@@ -83,14 +93,6 @@ cab Wq wq
 cab wQ wq
 cab WQ wq
 cab Q  q
-
-" load pathogen
-filetype off
-call pathogen#runtime_append_all_bundles()
-
-" enable filetype detection
-filetype plugin on
-filetype plugin indent on
 
 " display tabs and trailing spaces
 set list
