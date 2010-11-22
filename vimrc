@@ -207,6 +207,7 @@ au FocusLost * :wa
 
 " keeping history data
 set viminfo='10,\"30,:20,%,n~/.viminfo
+
 " cursor at the same position as it were on last edit
 au BufReadPost * if line("'\"")|execute("normal `\"")|endif
 
@@ -216,6 +217,18 @@ map! <S-Insert> <MiddleMouse>
 
 " Removes trailing whitespaces
 nnoremap <silent> <leader>f :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+" Open vsplit and switch over to it
+nnoremap <leader>vs <C-w>v<C-w>l
+
+" Open hsplit and switch over to it
+nnoremap <leader>hs <C-w>s<C-w>j
+
+" Easily navigate through splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " toggles paste mode
 nmap <F5> :call TogglePasteMode()<cr>
