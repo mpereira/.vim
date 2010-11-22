@@ -45,6 +45,10 @@ set directory=~/.tmp    " swap files location
 set autowrite           " flush external changes on open files
 set laststatus=2        " show status line
 
+" display tabs and trailing spaces
+set list
+set listchars=tab:»⋅,trail:⋅,nbsp:⋅
+
 " display a warning if fileformat isn't unix
 set statusline+=%#warningmsg#
 set statusline+=%{&ff!='unix'?'['.&ff.']':''}
@@ -93,10 +97,6 @@ cab Wq wq
 cab wQ wq
 cab WQ wq
 cab Q  q
-
-" display tabs and trailing spaces
-set list
-set listchars=tab:»⋅,trail:⋅,nbsp:⋅
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -173,11 +173,18 @@ let g:gist_detect_filetype = 1                "detecting filetype by name
 let g:gist_open_browser_after_post = 1        "opens browser after the post
 let g:gist_browser_command = 'chromium %URL%' "chromium is my browser
 
+" Don't show the help screen on <F1>
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
 " Use regular regexps
 nnoremap / /\v
 vnoremap / /\v
 
 nnoremap Y  y$  " yank from cursor to EOL
+
+" <C-L> clear highlights
 if exists(":nohls")
   nnoremap <silent> <C-L> :nohls<CR><C-L>
 endif
@@ -191,6 +198,9 @@ nmap <silent> <Leader>n :NERDTreeToggle<CR>
 " syntastic options
 let g:syntastic_enable_signs=1   " points error lines with arrows
 
+" save buffer when window focus is lost
+au FocusLost * :wa
+
 " keeping history data
 set viminfo='10,\"30,:20,%,n~/.viminfo
 " cursor at the same position as it were on last edit
@@ -200,10 +210,8 @@ au BufReadPost * if line("'\"")|execute("normal `\"")|endif
 map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
 
-" make control-l clear the highlights as well as redraw the screen
-"
-" removes all trailing whitespaces from the file
-nnoremap <silent> <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+" Removes trailing whitespaces
+nnoremap <silent> <leader>f :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " toggles paste mode
 nmap <F5> :call TogglePasteMode()<cr>
