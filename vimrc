@@ -49,38 +49,34 @@ set laststatus=2        " show status line
 set list
 set listchars=tab:»⋅,trail:⋅,nbsp:⋅
 
-" display the file path
-set statusline+=%F
-set statusline+=%*
+" filename and type
+set statusline+=%t\ %y:
 
-" display a warning if fileformat isn't unix
+" warn if fileformat isn't unix
 set statusline+=%#warningmsg#
 set statusline+=%{&ff!='unix'?'['.&ff.']':''}
 set statusline+=%*
 
-" display a warning if file encoding isn't utf-8
+" warn if file encoding isn't utf-8
 set statusline+=%#warningmsg#
 set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
 set statusline+=%*
 
-" display a warning if &et is wrong, we have mixed-indenting
-set statusline+=%#error#
+" warn if &et is wrong, we have mixed-indenting
+set statusline+=%#warningmsg#
 set statusline+=%{StatuslineTabWarning()}
-set statusline+=%*
 set statusline+=%{StatuslineTrailingSpaceWarning()}
+set statusline+=%*
 
-" display a warning if we have syntax errors
+" warn if we have syntax errors
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-set statusline+=%h      " help file flag
-set statusline+=%y      " filetype
 set statusline+=%r      " read only flag
 set statusline+=%m      " modified flag
-
 set statusline+=%=      "left/right separator
-set statusline+=\ \ %c,     "cursor column
+set statusline+=\ \ %c, "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 
@@ -183,6 +179,7 @@ endif
 
 " Command-T
 nmap <silent> <Leader>t :CommandT<CR>
+let g:CommandTMaxHeight = 15
 
 " NERDTree
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
