@@ -173,7 +173,10 @@ let g:gist_detect_filetype = 1                "detecting filetype by name
 let g:gist_open_browser_after_post = 1        "opens browser after the post
 let g:gist_browser_command = 'chromium %URL%' "chromium is my browser
 
-" Mappings
+" Use regular regexps
+nnoremap / /\v
+vnoremap / /\v
+
 nnoremap Y  y$  " yank from cursor to EOL
 if exists(":nohls")
   nnoremap <silent> <C-L> :nohls<CR><C-L>
