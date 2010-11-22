@@ -146,6 +146,16 @@ iab @@ murilo.soares3@gmail.com
 " map leader to ,
 let g:mapleader = ","
 
+" Fast saving/quitting
+nnoremap ;w :w!<CR>
+nnoremap ;W :w!<CR>
+nnoremap ;q :q!<CR>
+nnoremap ;Q :q!<CR>
+nnoremap ;wq :wq!<CR>
+nnoremap ;Wq :wq!<CR>
+nnoremap ;wQ :wq!<CR>
+nnoremap ;WQ :wq!<CR>
+
 " vim-ruby options
 compiler ruby                " enable compiler support for ruby
 let g:rubycomplete_rails = 1 " load rails environment for rails project's files
