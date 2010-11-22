@@ -39,7 +39,7 @@ set autochdir           " automatically cd into the directory the file is
 set ttyfast             " tell vim that our terminal is fast
 set novisualbell        " don't blink
 set noerrorbells        " no noise
-set cursorline          " line highlighting
+set cursorline          " highlights the line where the cursor is at
 set scrolloff=3         " minimal number of lines above and below the cursor
 set directory=~/.tmp    " swap files location
 set autowrite           " flush external changes on open files
@@ -83,8 +83,8 @@ set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 
-set wildmode=list:longest   " cmdline tab completion
 set wildmenu                " enable c-n and c-p to scroll through matches
+set wildmode=list:longest   " cmdline tab completion
 set wildignore=*.o,*.obj,*~ " stuff to ignore when tab completing
 
 " comprehensive saving and quiting
