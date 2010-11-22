@@ -182,7 +182,8 @@ vnoremap <F1> <ESC>
 nnoremap / /\v
 vnoremap / /\v
 
-nnoremap Y  y$  " yank from cursor to EOL
+" Yank from cursor to EOL
+nnoremap Y y$
 
 " <C-L> clear highlights
 if exists(":nohls")
@@ -194,6 +195,9 @@ nmap <silent> <Leader>t :CommandT<CR>
 
 " NERDTree
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
+
+" Ack
+nnoremap <leader>a :Ack 
 
 " syntastic options
 let g:syntastic_enable_signs=1   " points error lines with arrows
