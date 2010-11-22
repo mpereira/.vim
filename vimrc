@@ -139,10 +139,6 @@ autocmd FileType html       set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css        set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml        set omnifunc=xmlcomplete#CompleteTags
 
-" aliases
-iab msp Murilo Soares Pereira
-iab @@ murilo.soares3@gmail.com
-
 " map leader to ,
 let g:mapleader = ","
 
