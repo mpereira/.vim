@@ -49,6 +49,10 @@ set laststatus=2        " show status line
 set list
 set listchars=tab:»⋅,trail:⋅,nbsp:⋅
 
+" display the file path
+set statusline+=%F
+set statusline+=%*
+
 " display a warning if fileformat isn't unix
 set statusline+=%#warningmsg#
 set statusline+=%{&ff!='unix'?'['.&ff.']':''}
@@ -59,17 +63,11 @@ set statusline+=%#warningmsg#
 set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
 set statusline+=%*
 
-" display a warning if &paste is set
-set statusline+=%#error#
-set statusline+=%{&paste?'[paste]':''}
-set statusline+=%*
-
-" display a warning if &et is wrong, we have mixed-indenting or long lines
+" display a warning if &et is wrong, we have mixed-indenting
 set statusline+=%#error#
 set statusline+=%{StatuslineTabWarning()}
 set statusline+=%*
 set statusline+=%{StatuslineTrailingSpaceWarning()}
-set statusline+=%{StatuslineLongLineWarning()}
 
 " display a warning if we have syntax errors
 set statusline+=%#warningmsg#
@@ -82,8 +80,7 @@ set statusline+=%r      " read only flag
 set statusline+=%m      " modified flag
 
 set statusline+=%=      "left/right separator
-set statusline+=%{StatuslineCurrentHighlight()}\ \ "current highlight
-set statusline+=%c,     "cursor column
+set statusline+=\ \ %c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 
@@ -126,16 +123,6 @@ if has("gui_running")
   set mousehide              " hide mouse when start typing
 endif
 
-" commands overview
-" F2           - open FuzzyFinder
-" F4           - remove trailing whitespaces
-" F5           - toggle paste mode
-" F8           - copy selection to clipboard
-" F11          - toggle NERD tree
-" shift-insert - same as middle mouse button
-" shift-F8     - paste contents from the X server register
-" control-l    - redraw the screen
-
 " filetypes
 autocmd BufRead,BufNewFile Rakefile   set filetype=ruby
 autocmd BufRead,BufNewFile rakefile   set filetype=ruby
@@ -172,6 +159,10 @@ let g:gist_clip_command = 'xclip -selection clipboard'
 let g:gist_detect_filetype = 1                "detecting filetype by name
 let g:gist_open_browser_after_post = 1        "opens browser after the post
 let g:gist_browser_command = 'chromium %URL%' "chromium is my browser
+
+" <F2> toggles paste mode
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
 
 " Don't show the help screen on <F1>
 inoremap <F1> <ESC>
@@ -230,10 +221,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" toggles paste mode
-nmap <F5> :call TogglePasteMode()<cr>
-imap <F5> <c-o><F5>
-
 " copy line to X server register
 vmap <F8> :!xclip -f -sel clip<CR>
 
@@ -250,16 +237,6 @@ function! SetCursorPosition()
       normal! zz
     endif
   end
-endfunction
-
-function TogglePasteMode ()
-  if (&paste)
-    set nopaste
-    echo
-  else
-    set paste
-    echo
-  endif
 endfunction
 
 " define :Lorem command to dump in a paragraph of lorem ipsum
@@ -288,16 +265,6 @@ function! StatuslineTrailingSpaceWarning()
   return b:statusline_trailing_space_warning
 endfunction
 
-" return the syntax highlight group under the cursor ''
-function! StatuslineCurrentHighlight()
-    let name = synIDattr(synID(line('.'),col('.'),1),'name')
-    if name == ''
-        return ''
-    else
-        return '[' . name . ']'
-    endif
-endfunction
-
 "recalculate the tab warning flag when idle and after writing
 autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
 
@@ -318,63 +285,4 @@ function! StatuslineTabWarning()
     endif
   endif
   return b:statusline_tab_warning
-endfunction
-
-
-" recalculate the long line warning when idle and after saving
-autocmd cursorhold,bufwritepost * unlet! b:statusline_long_line_warning
-
-" return a warning for "long lines" where "long" is either &textwidth or 80 (if
-" no &textwidth is set)
-"
-" return [#x,my,$z] if long lines are found, were x is the number of long
-" lines, y is the median length of the long lines and z is the length of the
-" longest line
-" return an empty string if everything is fine
-function! StatuslineLongLineWarning()
-  if !exists("b:statusline_long_line_warning")
-    let long_line_lens = s:LongLines()
-
-    if len(long_line_lens) > 0
-      let b:statusline_long_line_warning = "[" .
-        \ '#' . len(long_line_lens) . "," .
-        \ 'm' . s:Median(long_line_lens) . "," .
-        \ '$' . max(long_line_lens) . "]"
-    else
-      let b:statusline_long_line_warning = ""
-    endif
-  endif
-  return b:statusline_long_line_warning
-endfunction
-
-" return a list containing the lengths of the long lines in this buffer
-function! s:LongLines()
-  let threshold = (&tw ? &tw : 80)
-  let spaces = repeat(" ", &ts)
-
-  let long_line_lens = []
-
-  let i = 1
-  while i <= line("$")
-    let len = strlen(substitute(getline(i), '\t', spaces, 'g'))
-    if len > threshold
-      call add(long_line_lens, len)
-    endif
-    let i += 1
-  endwhile
-
-  return long_line_lens
-endfunction
-
-" find the median of the given array of numbers
-function! s:Median(nums)
-  let nums = sort(a:nums)
-  let l = len(nums)
-
-  if l % 2 == 1
-    let i = (l-1) / 2
-    return nums[i]
-  else
-    return (nums[l/2] + nums[(l/2)-1]) / 2
-  endif
 endfunction
