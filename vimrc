@@ -150,11 +150,12 @@ nnoremap <leader>W :w!<CR>
 compiler ruby                " enable compiler support for ruby
 let g:rubycomplete_rails = 1 " load rails environment for rails project's files
 
-" gist-vim options
+" Gist-vim options
 let g:gist_clip_command = 'xclip -selection clipboard'
-let g:gist_detect_filetype = 1                "detecting filetype by name
-let g:gist_open_browser_after_post = 1        "opens browser after the post
-let g:gist_browser_command = 'chromium %URL%' "chromium is my browser
+let g:gist_detect_filetype = 1
+let g:gist_show_privates = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_browser_command = 'chromium %URL%'
 
 " <F2> toggles paste mode
 nnoremap <F2> :set invpaste paste?<CR>
