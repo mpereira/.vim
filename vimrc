@@ -196,9 +196,6 @@ nnoremap <leader>a :Ack
 " syntastic options
 let g:syntastic_enable_signs=1   " points error lines with arrows
 
-" save buffer when window focus is lost
-au FocusLost * :wa
-
 " keeping history data
 set viminfo='10,\"30,:20,%,n~/.viminfo
 
