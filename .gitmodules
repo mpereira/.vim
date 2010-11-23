@@ -25,9 +25,6 @@
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat
-[submodule "bundle/gist-vim"]
-	path = bundle/gist-vim
-	url = git://github.com/mattn/gist-vim
 [submodule "bundle/Command-T"]
 	path = bundle/Command-T
 	url = git://github.com/wincent/Command-T.git
@@ -43,3 +40,6 @@
 [submodule "bundle/vim-rake"]
 	path = bundle/vim-rake
 	url = http://github.com/tpope/vim-rake.git
+[submodule "bundle/Gist.vim"]
+	path = bundle/Gist.vim
+	url = git://github.com/vim-scripts/Gist.vim.git
