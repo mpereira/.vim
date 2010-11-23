@@ -210,12 +210,6 @@ nnoremap <leader>vs <C-w>v<C-w>l
 " Open hsplit and switch over to it
 nnoremap <leader>hs <C-w>s<C-w>j
 
-" copy line to X server register
-vmap <F8> :!xclip -f -sel clip<CR>
-
-" paste contents from the X server register
-map <S-F8> mz:-1r !xclip -o -sel clip<CR>`z
-
 " jump to last cursor position when opening a file
 " dont do it when writing a commit log entry
 au BufReadPost * call SetCursorPosition()
