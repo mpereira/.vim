@@ -120,24 +120,24 @@ if has("gui_running")
 endif
 
 " filetypes
-autocmd BufRead,BufNewFile Rakefile   set filetype=ruby
-autocmd BufRead,BufNewFile rakefile   set filetype=ruby
-autocmd BufRead,BufNewFile *.rake     set filetype=ruby
-autocmd BufRead,BufNewFile .irbrc     set filetype=ruby
-autocmd BufRead,BufNewFile *.rjs      set filetype=ruby
-autocmd BufRead,BufNewFile *.rhtml    set filetype=eruby
-autocmd BufRead,BufNewFile *.html.erb set filetype=eruby
-autocmd BufRead,BufNewFile *.ldg      set filetype=ledger
-autocmd BufRead,BufNewFile *.feature  set filetype=cucumber
+au BufRead,BufNewFile Rakefile   set filetype=ruby
+au BufRead,BufNewFile rakefile   set filetype=ruby
+au BufRead,BufNewFile *.rake     set filetype=ruby
+au BufRead,BufNewFile .irbrc     set filetype=ruby
+au BufRead,BufNewFile *.rjs      set filetype=ruby
+au BufRead,BufNewFile *.rhtml    set filetype=eruby
+au BufRead,BufNewFile *.html.erb set filetype=eruby
+au BufRead,BufNewFile *.ldg      set filetype=ledger
+au BufRead,BufNewFile *.feature  set filetype=cucumber
 
 " omni completion
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType python     set omnifunc=pythoncomplete#Complete
-autocmd FileType c          set omnifunc=ccomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html       set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css        set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml        set omnifunc=xmlcomplete#CompleteTags
+au FileType ruby,eruby set omnifunc=rubycomplete#Complete
+au FileType python     set omnifunc=pythoncomplete#Complete
+au FileType c          set omnifunc=ccomplete#Complete
+au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+au FileType html       set omnifunc=htmlcomplete#CompleteTags
+au FileType css        set omnifunc=csscomplete#CompleteCSS
+au FileType xml        set omnifunc=xmlcomplete#CompleteTags
 
 " map leader to ,
 let g:mapleader = ","
@@ -232,7 +232,7 @@ map <S-F8> mz:-1r !xclip -o -sel clip<CR>`z
 
 " jump to last cursor position when opening a file
 " dont do it when writing a commit log entry
-autocmd BufReadPost * call SetCursorPosition()
+au BufReadPost * call SetCursorPosition()
 function! SetCursorPosition()
   if &filetype !~ 'commit\c'
     if line("'\"") > 0 && line("'\"") <= line("$")
@@ -253,7 +253,7 @@ command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
   \ laborum.
 
 " recalculate the trailing whitespace warning when idle, and after saving
-autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
+au cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
 
 " return '[\s]' if trailing white space is detected
 " return an empty string if everything is fine
@@ -269,7 +269,7 @@ function! StatuslineTrailingSpaceWarning()
 endfunction
 
 "recalculate the tab warning flag when idle and after writing
-autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
+au cursorhold,bufwritepost * unlet! b:statusline_tab_warning
 
 " return '[&et]' if &et is set wrong
 " return '[mixed-indenting]' if spaces and tabs are used to indent
