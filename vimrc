@@ -197,10 +197,6 @@ set viminfo='10,\"30,:20,%,n~/.viminfo
 " cursor at the same position as it were on last edit
 au BufReadPost * if line("'\"")|execute("normal `\"")|endif
 
-" make shift-insert work like in xterm
-map <S-Insert> <MiddleMouse>
-map! <S-Insert> <MiddleMouse>
-
 " Removes trailing whitespaces
 nnoremap <silent> <leader>f :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
