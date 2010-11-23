@@ -142,15 +142,9 @@ au FileType xml        set omnifunc=xmlcomplete#CompleteTags
 " map leader to ,
 let g:mapleader = ","
 
-" Fast saving/quitting
-nnoremap ;w :w!<CR>
-nnoremap ;W :w!<CR>
-nnoremap ;q :q!<CR>
-nnoremap ;Q :q!<CR>
-nnoremap ;wq :wq!<CR>
-nnoremap ;Wq :wq!<CR>
-nnoremap ;wQ :wq!<CR>
-nnoremap ;WQ :wq!<CR>
+" Fast saving
+nnoremap <leader>w :w!<CR>
+nnoremap <leader>W :w!<CR>
 
 " vim-ruby options
 compiler ruby                " enable compiler support for ruby
