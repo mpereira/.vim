@@ -192,8 +192,9 @@ nmap <silent> <Leader>n :NERDTreeToggle<CR>
 " Ack
 nnoremap <leader>a :Ack 
 
-" syntastic options
+" Syntastic options
 let g:syntastic_enable_signs=1   " points error lines with arrows
+let g:syntastic_quiet_warnings=1 " only show errors
 
 " keeping history data
 set viminfo='10,\"30,:20,%,n~/.viminfo
