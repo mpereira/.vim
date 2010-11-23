@@ -139,8 +139,11 @@ au FileType html       set omnifunc=htmlcomplete#CompleteTags
 au FileType css        set omnifunc=csscomplete#CompleteCSS
 au FileType xml        set omnifunc=xmlcomplete#CompleteTags
 
-" map leader to ,
+" leader -> ,
 let g:mapleader = ","
+
+" ; -> :
+nnoremap ; :
 
 " Fast saving
 nnoremap <leader>w :w!<CR>
