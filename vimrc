@@ -50,7 +50,7 @@ set list
 set listchars=tab:»⋅,trail:⋅,nbsp:⋅
 
 " filename and type
-set statusline+=%t\ %y:
+set statusline+=%t\ %y\ \ 
 
 " warn if fileformat isn't unix
 set statusline+=%#warningmsg#
