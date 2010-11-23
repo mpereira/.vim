@@ -181,6 +181,7 @@ nnoremap Y y$
 " <C-L> clear highlights
 if exists(":nohls")
   nnoremap <silent> <C-L> :nohls<CR><C-L>
+  inoremap <C-L> <C-O>:nohls<CR>
 endif
 
 " Command-T
@@ -214,12 +215,6 @@ nnoremap <leader>vs <C-w>v<C-w>l
 
 " Open hsplit and switch over to it
 nnoremap <leader>hs <C-w>s<C-w>j
-
-" Easily navigate through splits
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 " copy line to X server register
 vmap <F8> :!xclip -f -sel clip<CR>
