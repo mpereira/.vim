@@ -102,9 +102,9 @@ set mouse=a
 set ttymouse=xterm2
 
 " display settings
-set t_Co=88
+set t_Co=256
 syntax on
-colorscheme fruity
+colorscheme jellybeans
 set columns=85
 
 " GUI options
