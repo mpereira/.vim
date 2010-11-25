@@ -26,7 +26,7 @@ Plugins used:
   vim-surround      (https://github.com/tpope/vim-surround)
 
 Colorscheme:
-  fruity           (http://www.vim.org/scripts/script.php?script_id=1871)
+  jellybens         (https://github.com/vim-scripts/jellybeans.vim.git)
 
 Installation
 # checking out the repository as your vim directory
