@@ -194,6 +194,12 @@ let g:CommandTScanDotDirectores = 1
 " Show the match window at the top of the screen
 let g:CommandTMatchWindowAtTop = 1
 
+" Fugitive
+map <Leader>gs :Gstatus<CR>
+map <Leader>gc :Gcommit<CR>
+map <Leader>gp :Git push<CR>
+map <Leader>gb :Gblame<CR>
+
 " NERDTree
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 
