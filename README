@@ -6,7 +6,7 @@ Plugins used:
   c.vim            (https://github.com/vim-scripts/c.vim.git)
   camelcasemotion  (https://github.com/vim-scripts/camelcasemotion.git)
   Command-T        (https://github.com/wincent/Command-T)
-  CSApprox         (http://www.vim.org/scripts/script.php?script_id=2390)
+  CSApprox         (https://github.com/vim-scripts/CSApprox.git)
   Gist.vim         (https://github.com/vim-scripts/Gist.vim)
   ledger.vim       (http://www.vim.org/scripts/download_script.php?src_id=3694)
   matchit.zip      (https://github.com/vim-scripts/matchit.zip.git)
