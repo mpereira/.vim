@@ -49,3 +49,6 @@
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = https://github.com/vim-scripts/camelcasemotion.git
+[submodule "bundle/c.vim"]
+	path = bundle/c.vim
+	url = https://github.com/vim-scripts/c.vim.git
