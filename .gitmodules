@@ -58,3 +58,9 @@
 [submodule "bundle/CSApprox"]
 	path = bundle/CSApprox
 	url = https://github.com/vim-scripts/CSApprox.git
+[submodule "bundle/ledger.vim"]
+	path = bundle/ledger.vim
+	url = https://github.com/vim-scripts/ledger.vim.git
+[submodule "bundle/ledger.vim-indent"]
+	path = bundle/ledger.vim-indent
+	url = https://github.com/vim-scripts/ledger.vim-indent.git
