@@ -9,7 +9,7 @@ Plugins used:
   CSApprox         (http://www.vim.org/scripts/script.php?script_id=2390)
   Gist.vim         (https://github.com/vim-scripts/Gist.vim)
   ledger.vim       (http://www.vim.org/scripts/download_script.php?src_id=3694)
-  matchit          (http://www.vim.org/scripts/script.php?script_id=39)
+  matchit.zip      (https://github.com/vim-scripts/matchit.zip.git)
   nerdcommenter    (http://github.com/scrooloose/nerdcommenter)
   nerdtree         (http://github.com/scrooloose/nerdtree)
   snipmate.vim     (http://github.com/msanders/snipmate.vim)
