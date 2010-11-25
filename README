@@ -2,6 +2,7 @@ My personal vimfiles, crafted carefully with time.
 
 Plugins used:
   ack.vim          (http://github.com/mileszs/ack.vim)
+  vim-autoclose    (https://github.com/Townk/vim-autoclose.git)
   c.vim            (http://www.vim.org/scripts/script.php?script_id=213)
   Command-T        (http://github.com/wincent/Command-T)
   CSApprox         (http://www.vim.org/scripts/script.php?script_id=2390)
