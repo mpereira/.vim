@@ -30,6 +30,7 @@ set foldmethod=indent   " fold based on indent
 set foldnestmax=3       " deepest fold is 3 levels
 set nofoldenable        " dont fold by default
 
+set clipboard=unnamed   " yanked values piped to the clipboard
 set number              " show line numbers
 set ruler               " show the cursor position all the time
 set showcmd             " display incomplete commands
@@ -183,14 +184,21 @@ if exists(":nohls")
 endif
 
 " Command-T
-nmap <silent> <Leader>t :CommandT<CR>
+" Maximum window height
 let g:CommandTMaxHeight = 15
+
+" Always display and search hidden files/directories
+let g:CommandTAlwaysShowDotFiles = 1
+let g:CommandTScanDotDirectores = 1
+
+" Show the match window at the top of the screen
+let g:CommandTMatchWindowAtTop = 1
 
 " NERDTree
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 
 " Ack
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ack<Space>
 
 " Syntastic options
 let g:syntastic_enable_signs=1   " points error lines with arrows
