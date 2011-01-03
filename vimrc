@@ -106,7 +106,6 @@ set ttymouse=xterm2
 set t_Co=256
 syntax on
 colorscheme jellybeans
-set columns=85
 
 " GUI options
 if has("gui_running")
