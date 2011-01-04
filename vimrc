@@ -109,7 +109,7 @@ colorscheme jellybeans
 
 " GUI options
 if has("gui_running")
-  set guifont=Monaco\ 9
+  set guifont=Monaco\ 10
   set guioptions-=T          " no toolbar
   set guioptions-=m          " no menu
   set guioptions-=r          " no right side scrollbar
