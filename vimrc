@@ -51,7 +51,7 @@ set list
 set listchars=tab:»⋅,trail:⋅,nbsp:⋅
 
 " filename and type
-set statusline+=%t\ %y\ \ 
+set statusline+=%t%y
 
 " warn if fileformat isn't unix
 set statusline+=%#warningmsg#
@@ -120,15 +120,16 @@ if has("gui_running")
 endif
 
 " filetypes
-au BufRead,BufNewFile Rakefile   set filetype=ruby
-au BufRead,BufNewFile rakefile   set filetype=ruby
-au BufRead,BufNewFile *.rake     set filetype=ruby
-au BufRead,BufNewFile .irbrc     set filetype=ruby
-au BufRead,BufNewFile *.rjs      set filetype=ruby
-au BufRead,BufNewFile *.rhtml    set filetype=eruby
-au BufRead,BufNewFile *.html.erb set filetype=eruby
-au BufRead,BufNewFile *.ldg      set filetype=ledger
-au BufRead,BufNewFile *.feature  set filetype=cucumber
+au BufRead,BufNewFile Rakefile      set filetype=ruby
+au BufRead,BufNewFile rakefile      set filetype=ruby
+au BufRead,BufNewFile *.rake        set filetype=ruby
+au BufRead,BufNewFile .irbrc        set filetype=ruby
+au BufRead,BufNewFile *.rjs         set filetype=ruby
+au BufRead,BufNewFile *.rhtml       set filetype=eruby
+au BufRead,BufNewFile *.html.erb    set filetype=eruby
+au BufRead,BufNewFile *.ldg         set filetype=ledger
+au BufRead,BufNewFile *.feature     set filetype=cucumber
+au BufRead,BufNewFile .vimperatorrc set filetype=vim
 
 " omni completion
 au FileType ruby,eruby set omnifunc=rubycomplete#Complete
