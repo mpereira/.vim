@@ -36,7 +36,6 @@ set ruler               " show the cursor position all the time
 set showcmd             " display incomplete commands
 set showmatch           " highlight matching braces
 set wrap                " wrap lines automatically
-set autochdir           " automatically cd into the directory the file is
 set ttyfast             " tell vim that our terminal is fast
 set novisualbell        " don't blink
 set noerrorbells        " no noise
