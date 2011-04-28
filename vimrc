@@ -44,6 +44,7 @@ set scrolloff=3         " minimal number of lines above and below the cursor
 set directory=~/.tmp    " swap files location
 set autowrite           " flush external changes on open files
 set laststatus=2        " show status line
+set hidden              " don't lose undo history when changing buffers
 
 " display tabs and trailing spaces
 set list
