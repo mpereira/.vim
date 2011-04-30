@@ -64,3 +64,6 @@
 [submodule "bundle/ledger.vim-indent"]
 	path = bundle/ledger.vim-indent
 	url = https://github.com/vim-scripts/ledger.vim-indent.git
+[submodule "bundle/bufexplorer.zip"]
+	path = bundle/bufexplorer.zip
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
