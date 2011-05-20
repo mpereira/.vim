@@ -45,6 +45,7 @@ set directory=~/.tmp    " swap files location
 set autowrite           " flush external changes on open files
 set laststatus=2        " show status line
 set hidden              " don't lose undo history when changing buffers
+set lazyredraw          " do not redraw while running macros
 
 " display tabs and trailing spaces
 set list
