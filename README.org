@@ -62,6 +62,7 @@ $ make && sudo make install
   - [[https://github.com/Townk/vim-autoclose][vim-autoclose]]
   - [[https://github.com/tpope/vim-cucumber][vim-cucumber]]
   - [[https://github.com/tpope/vim-fugitive][vim-fugitive]]
+  - [[https://github.com/plasticboy/vim-markdown][vim-markdown]]
   - [[https://github.com/tpope/vim-pathogen][vim-pathogen]]
   - [[https://github.com/tpope/vim-ragtag][vim-ragtag]]
   - [[https://github.com/tpope/vim-rails][vim-rails]]
