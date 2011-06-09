@@ -131,6 +131,7 @@ au BufRead,BufNewFile *.html.erb    set filetype=eruby
 au BufRead,BufNewFile *.ldg         set filetype=ledger
 au BufRead,BufNewFile *.feature     set filetype=cucumber
 au BufRead,BufNewFile .vimperatorrc set filetype=vim
+au BufRead,BufNewFile .rvmrc        set filetype=sh
 
 " omni completion
 au FileType ruby,eruby set omnifunc=rubycomplete#Complete
