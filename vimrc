@@ -11,7 +11,6 @@ set nocompatible        " disable vi compatibility
 set modelines=0         " disable modelines (prevents a security exploit)
 
 set encoding=utf-8
-set fileencoding=utf-8
 
 set ignorecase          " makes search case-insensitive
 set smartcase           " unless it contains uppercase characters
@@ -269,6 +268,9 @@ endfunction
 
 "recalculate the tab warning flag when idle and after writing
 au cursorhold,bufwritepost * unlet! b:statusline_tab_warning
+
+"set updatetime=500
+"au CursorHold * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
 
 " return '[&et]' if &et is set wrong
 " return '[mixed-indenting]' if spaces and tabs are used to indent
