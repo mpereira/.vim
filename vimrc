@@ -129,6 +129,7 @@ au BufRead,BufNewFile *.rhtml       set filetype=eruby
 au BufRead,BufNewFile *.html.erb    set filetype=eruby
 au BufRead,BufNewFile *.ldg         set filetype=ledger
 au BufRead,BufNewFile *.feature     set filetype=cucumber
+au BufRead,BufNewFile *.escript     set filetype=erlang
 au BufRead,BufNewFile .vimperatorrc set filetype=vim
 au BufRead,BufNewFile .rvmrc        set filetype=sh
 
