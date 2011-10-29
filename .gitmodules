@@ -82,6 +82,3 @@
 [submodule "bundle/gitv"]
 	path = bundle/gitv
 	url = https://github.com/vim-scripts/gitv.git
-[submodule "bundle/vimerl"]
-	path = bundle/vimerl
-	url = git://github.com/jimenezrick/vimerl.git
