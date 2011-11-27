@@ -40,15 +40,16 @@ with ruby support.
   To make Gist.vim work you need to set your github token in ~/.gitconfig.
 
 ## Plugins Used
+  - [CSApprox](https://github.com/vim-scripts/CSApprox)
+  - [Command-T](https://github.com/wincent/Command-T)
+  - [Gist.vim](https://github.com/vim-scripts/Gist.vim)
+  - [MatchTag](https://github.com/gregsexton/MatchTag)
   - [ack.vim](https://github.com/mileszs/ack.vim)
   - [bufexplorer.zip](https://github.com/vim-scripts/bufexplorer.zip)
   - [c.vim](https://github.com/vim-scripts/c.vim)
   - [camelcasemotion](https://github.com/vim-scripts/camelcasemotion)
-  - [Command-T](https://github.com/wincent/Command-T)
-  - [CSApprox](https://github.com/vim-scripts/CSApprox)
-  - [Gist.vim](https://github.com/vim-scripts/Gist.vim)
-  - [ledger.vim](https://github.com/vim-scripts/ledger.vim)
   - [ledger.vim-indent](https://github.com/vim-scripts/ledger.vim-indent)
+  - [ledger.vim](https://github.com/vim-scripts/ledger.vim)
   - [matchit.zip](https://github.com/vim-scripts/matchit.zip)
   - [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
   - [nerdtree](https://github.com/scrooloose/nerdtree)
