@@ -76,14 +76,14 @@ set statusline+=%*
 
 set statusline+=%r      " read only flag
 set statusline+=%m      " modified flag
-set statusline+=%=      "left/right separator
-set statusline+=\ \ %c, "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
+set statusline+=%=      " left/right separator
+set statusline+=\ \ %c, " cursor column
+set statusline+=%l/%L   " cursor line/total lines
+set statusline+=\ %P    " percent through file
 
-set wildmenu                " enable c-n and c-p to scroll through matches
-set wildmode=list:longest   " cmdline tab completion
-set wildignore=*.o,*.obj,*~ " stuff to ignore when tab completing
+set wildmenu                            " C-n and C-p scroll through matches
+set wildmode=list:longest               " cmdline tab completion
+set wildignore=*.o,*.obj,*~,*.beam,.git " stuff to ignore when tab completing
 
 " comprehensive saving and quiting
 cab W  w
