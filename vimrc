@@ -50,6 +50,8 @@ set lazyredraw          " do not redraw while running macros
 set list
 set listchars=tab:»⋅,trail:⋅,nbsp:⋅
 
+set statusline=
+
 " filename and type
 set statusline+=%t%y
 
@@ -182,8 +184,11 @@ vnoremap > >gv
 " Force Saving Files that Require Root Permission (http://vimbits.com/bits/45).
 cmap w!! w !sudo tee % > /dev/null
 
-" Automatically reload vimrc when it's saved (http://vimbits.com/bits/128).
-au BufWritePost .vimrc so ~/.vimrc
+" Automatically reload vimrc when it's saved.
+augroup AutoReloadVimRC
+  au!
+  au BufWritePost vimrc so $MYVIMRC
+augroup END
 
 " <C-L> clear highlights
 if exists(":nohls")
