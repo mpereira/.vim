@@ -63,6 +63,7 @@ with ruby support.
   - [vim-less](https://github.com/lunaru/vim-less)
   - [vim-markdown](https://github.com/plasticboy/vim-markdown)
   - [vim-pathogen](https://github.com/tpope/vim-pathogen)
+  - [vim-powerline](https://github.com/Lokaltog/vim-powerline)
   - [vim-ragtag](https://github.com/tpope/vim-ragtag)
   - [vim-rails](https://github.com/tpope/vim-rails)
   - [vim-rake](https://github.com/tpope/vim-rake)
