@@ -198,7 +198,7 @@ endif
 
 " Command-T
 " Maximum window height
-let g:CommandTMaxHeight = 15
+let g:CommandTMaxHeight = 10
 
 " Always display and search hidden files/directories
 let g:CommandTAlwaysShowDotFiles = 1
