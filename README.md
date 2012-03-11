@@ -9,8 +9,7 @@
 ## Installation
     $ git clone git://github.com/mpereira/vimfiles ~/.vim
     $ cd ~/.vim
-    $ git submodule init
-    $ git submodule update
+    $ make install_git_modules
     $ echo "source ~/.vim/vimrc" > ~/.vimrc
 
 ### Notes
