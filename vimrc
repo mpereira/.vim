@@ -23,8 +23,8 @@ set softtabstop=2       " counts 2 spaces when delete or backspace is used
 set shiftwidth=2        " indent with 2 spaces
 set expandtab           " expand tabs to spaces
 
-set smartindent         " use intelligent identention
-set autoindent          " use identention of previous line
+set smartindent         " use intelligent indentention
+set autoindent          " use indentention of previous line
 
 set foldmethod=indent   " fold based on indent
 set foldnestmax=3       " deepest fold is 3 levels
