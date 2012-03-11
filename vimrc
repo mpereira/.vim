@@ -232,5 +232,6 @@ command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
   \ proident, sunt in culpa qui officia deserunt mollit anim id est
   \ laborum.
 
-"set updatetime=500
-"au CursorHold * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
+" Highlight word under the cursor.
+set updatetime=500
+au CursorHold * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
