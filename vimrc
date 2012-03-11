@@ -50,39 +50,6 @@ set lazyredraw          " do not redraw while running macros
 set list
 set listchars=tab:»⋅,trail:⋅,nbsp:⋅
 
-set statusline=
-
-" filename and type
-set statusline+=%t%y
-
-" warn if fileformat isn't unix
-set statusline+=%#warningmsg#
-set statusline+=%{&ff!='unix'?'['.&ff.']':''}
-set statusline+=%*
-
-" warn if file encoding isn't utf-8
-set statusline+=%#warningmsg#
-set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
-set statusline+=%*
-
-" warn if &et is wrong, we have mixed-indenting
-set statusline+=%#warningmsg#
-set statusline+=%{StatuslineTabWarning()}
-set statusline+=%{StatuslineTrailingSpaceWarning()}
-set statusline+=%*
-
-" warn if we have syntax errors
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-set statusline+=%r      " read only flag
-set statusline+=%m      " modified flag
-set statusline+=%=      " left/right separator
-set statusline+=\ \ %c, " cursor column
-set statusline+=%l/%L   " cursor line/total lines
-set statusline+=\ %P    " percent through file
-
 set wildmenu                            " C-n and C-p scroll through matches
 set wildmode=list:longest               " cmdline tab completion
 set wildignore=*.o,*.obj,*~,*.beam,.git " stuff to ignore when tab completing
@@ -111,7 +78,7 @@ colorscheme jellybeans
 
 " GUI options
 if has("gui_running")
-  set guifont=Monaco\ 10
+  set guifont=Monaco\ for\ Powerline\ 10
   set guioptions-=T          " no toolbar
   set guioptions-=m          " no menu
   set guioptions-=r          " no right side scrollbar
@@ -225,6 +192,9 @@ let NERDTreeShowHidden=1
 " Ack
 nnoremap <leader>a :Ack<Space>
 
+" Powerline.
+let g:Powerline_symbols = 'fancy'
+
 " Syntastic options
 let g:syntastic_enable_signs=1   " points error lines with arrows
 let g:syntastic_quiet_warnings=1 " only show errors
@@ -266,43 +236,5 @@ command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
   \ proident, sunt in culpa qui officia deserunt mollit anim id est
   \ laborum.
 
-" recalculate the trailing whitespace warning when idle, and after saving
-au cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
-
-" return '[\s]' if trailing white space is detected
-" return an empty string if everything is fine
-function! StatuslineTrailingSpaceWarning()
-  if !exists("b:statusline_trailing_space_warning")
-    if search('\s\+$', 'nw') != 0
-      let b:statusline_trailing_space_warning = '[\s]'
-    else
-      let b:statusline_trailing_space_warning = ''
-    endif
-  endif
-  return b:statusline_trailing_space_warning
-endfunction
-
-"recalculate the tab warning flag when idle and after writing
-au cursorhold,bufwritepost * unlet! b:statusline_tab_warning
-
 "set updatetime=500
 "au CursorHold * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
-
-" return '[&et]' if &et is set wrong
-" return '[mixed-indenting]' if spaces and tabs are used to indent
-" return an empty string if everything is fine
-function! StatuslineTabWarning()
-  if !exists("b:statusline_tab_warning")
-    let tabs = search('^\t', 'nw') != 0
-    let spaces = search('^ ', 'nw') != 0
-
-    if tabs && spaces
-      let b:statusline_tab_warning =  '[mixed-indenting]'
-    elseif (spaces && !&et) || (tabs && &et)
-      let b:statusline_tab_warning = '[&et]'
-    else
-      let b:statusline_tab_warning = ''
-    endif
-  endif
-  return b:statusline_tab_warning
-endfunction
