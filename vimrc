@@ -2,50 +2,56 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+" Load external runtime.
+runtime! vimrc.d/**/*.vim
+
 " enable filetype detection
 filetype plugin on
 filetype plugin indent on
 
-set nocompatible        " disable vi compatibility
-set background=dark     " assume a dark background
+set nocompatible       " disable vi compatibility
+set background=dark    " assume a dark background
 
-set modelines=0         " disable modelines (prevents a security exploit)
+set modelines=0        " disable modelines (prevents a security exploit)
 
 set encoding=utf-8
 
-set ignorecase          " makes search case-insensitive
-set smartcase           " unless it contains uppercase characters
-set incsearch           " show pattern while typing
-set hlsearch            " highlight search results
+set ignorecase         " makes search case-insensitive
+set smartcase          " unless it contains uppercase characters
+set incsearch          " show pattern while typing
+set hlsearch           " highlight search results
 
-set tabstop=2           " tab width is 2 spaces
-set softtabstop=2       " counts 2 spaces when delete or backspace is used
-set shiftwidth=2        " indent with 2 spaces
-set expandtab           " expand tabs to spaces
+set tabstop=2          " tab width is 2 spaces
+set softtabstop=2      " counts 2 spaces when delete or backspace is used
+set shiftwidth=2       " indent with 2 spaces
+set expandtab          " expand tabs to spaces
 
-set smartindent         " use intelligent indentention
-set autoindent          " use indentention of previous line
+set smartindent        " use intelligent indentention
+set autoindent         " use indentention of previous line
 
-set foldmethod=indent   " fold based on indent
-set foldnestmax=3       " deepest fold is 3 levels
-set nofoldenable        " dont fold by default
+set foldmethod=indent  " fold based on indent
+set foldnestmax=3      " deepest fold is 3 levels
+set nofoldenable       " dont fold by default
 
-set clipboard=unnamed   " yanked values piped to the clipboard
-set number              " show line numbers
-set ruler               " show the cursor position all the time
-set showcmd             " display incomplete commands
-set showmatch           " highlight matching braces
-set wrap                " wrap lines automatically
-set ttyfast             " tell vim that our terminal is fast
-set novisualbell        " don't blink
-set noerrorbells        " no noise
-set cursorline          " highlights the line where the cursor is at
-set scrolloff=3         " minimal number of lines above and below the cursor
-set directory=~/.tmp    " swap files location
-set autowrite           " flush external changes on open files
-set laststatus=2        " show status line
-set hidden              " don't lose undo history when changing buffers
-set lazyredraw          " do not redraw while running macros
+set clipboard=unnamed  " yanked values piped to the clipboard
+set number             " show line numbers
+set ruler              " show the cursor position all the time
+set showcmd            " display incomplete commands
+set showmatch          " highlight matching braces
+set wrap               " wrap lines automatically
+set ttyfast            " tell vim that our terminal is fast
+set novisualbell       " don't blink
+set noerrorbells       " no noise
+set cursorline         " highlights the line where the cursor is at
+set scrolloff=3        " minimal number of lines above and below the cursor
+set nowritebackup      " don't save backup files
+set autowrite          " flush external changes on open files
+set laststatus=2       " show status line
+set hidden             " don't lose undo history when changing buffers
+set lazyredraw         " do not redraw while running macros
+set noswapfile         " no swap file
+set undofile           " persistent undo history
+set undodir=~/.vim/tmp " don't save undo files locally
 
 " display tabs and trailing spaces
 set list
@@ -54,13 +60,6 @@ set listchars=tab:»⋅,trail:⋅,nbsp:⋅
 set wildmenu                            " C-n and C-p scroll through matches
 set wildmode=list:longest               " cmdline tab completion
 set wildignore=*.o,*.obj,*~,*.beam,.git " stuff to ignore when tab completing
-
-" comprehensive saving and quiting
-cab W  w
-cab Wq wq
-cab wQ wq
-cab WQ wq
-cab Q  q
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -74,6 +73,7 @@ set ttymouse=xterm2
 
 " display settings
 set t_Co=256
+set colorcolumn=81
 syntax on
 colorscheme jellybeans
 
@@ -118,17 +118,6 @@ let g:mapleader = ","
 " ; -> :
 nnoremap ; :
 
-" vim-ruby options
-compiler ruby                " enable compiler support for ruby
-let g:rubycomplete_rails = 1 " load rails environment for rails project's files
-
-" Gist-vim options
-let g:gist_clip_command = 'xclip -selection clipboard'
-let g:gist_detect_filetype = 1
-let g:gist_show_privates = 1
-let g:gist_open_browser_after_post = 1
-let g:gist_browser_command = 'firefox %URL%'
-
 " <F2> toggles paste mode
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
@@ -145,8 +134,12 @@ vnoremap / /\v
 " Yank from cursor to EOL
 nnoremap Y y$
 
-" Force Saving Files that Require Root Permission (http://vimbits.com/bits/45).
-cmap w!! w !sudo tee % > /dev/null
+" Force saving files that require root.
+command! -bar -nargs=0 W silent! exec "write !sudo tee % >/dev/null" | silent! e   dit!
+
+" Re-indent pasted text.
+nnoremap <Leader>p p'[v']=
+nnoremap <Leader>P P'[v']=
 
 " Automatically reload vimrc when it's saved.
 augroup AutoReloadVimRC
@@ -156,45 +149,12 @@ augroup END
 
 " <C-L> clear highlights
 if exists(":nohls")
-  nnoremap <silent> <C-L> :nohls<CR><C-L>
-  inoremap <C-L> <C-O>:nohls<CR>
+  nnoremap <silent> <C-L> :nohlsearch<CR>
+  inoremap <C-L> <C-O>:nohlsearch<CR>
 endif
 
-" Command-T
-" Maximum window height
-let g:CommandTMaxHeight = 10
-
-" Always display and search hidden files/directories
-let g:CommandTAlwaysShowDotFiles = 1
-let g:CommandTScanDotDirectores = 1
-
-" Show the match window at the top of the screen
-let g:CommandTMatchWindowAtTop = 1
-
-" Fugitive
-map <Leader>gs :Gstatus<CR>
-map <Leader>gc :Gcommit<CR>
-map <Leader>gp :Git push<CR>
-map <Leader>gb :Gblame<CR>
-
-" NERDTree
-nmap <silent> <Leader>n :NERDTreeToggle<CR>
-
-" Let NERDTree change my working directory if its root changes
-let NERDTreeChDirMode=2
-
-" Show hidden files
-let NERDTreeShowHidden=1
-
-" Ack
-nnoremap <leader>a :Ack<Space>
-
-" Powerline.
-let g:Powerline_symbols = 'fancy'
-
-" Syntastic options
-let g:syntastic_enable_signs=1   " points error lines with arrows
-let g:syntastic_quiet_warnings=1 " only show errors
+" :help
+nnoremap <leader>hh :help<Space>
 
 " keeping history data
 set viminfo='10,\"30,:20,%,n~/.viminfo
