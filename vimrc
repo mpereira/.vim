@@ -144,10 +144,6 @@ vnoremap / /\v
 " Yank from cursor to EOL
 nnoremap Y y$
 
-" Reselect visual block after indent/outdent (http://vimbits.com/bits/20).
-vnoremap < <gv
-vnoremap > >gv
-
 " Force Saving Files that Require Root Permission (http://vimbits.com/bits/45).
 cmap w!! w !sudo tee % > /dev/null
 
