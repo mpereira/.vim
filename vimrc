@@ -7,6 +7,7 @@ filetype plugin on
 filetype plugin indent on
 
 set nocompatible        " disable vi compatibility
+set background=dark     " assume a dark background
 
 set modelines=0         " disable modelines (prevents a security exploit)
 
@@ -231,7 +232,3 @@ command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
   \ fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non
   \ proident, sunt in culpa qui officia deserunt mollit anim id est
   \ laborum.
-
-" Highlight word under the cursor.
-set updatetime=500
-au CursorHold * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
