@@ -1,6 +1,6 @@
 " load pathogen
 filetype off
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 " enable filetype detection
 filetype plugin on
