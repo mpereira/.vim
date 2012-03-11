@@ -2,6 +2,7 @@
 
 ## Dependencies
   - ack
+  - ctags
   - git
   - ruby
   - vim compiled with ruby support
