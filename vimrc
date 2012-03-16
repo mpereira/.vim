@@ -136,7 +136,7 @@ vnoremap / /\v
 nnoremap Y y$
 
 " Force saving files that require root.
-command! -bar -nargs=0 W silent! exec "write !sudo tee % >/dev/null" | silent! e   dit!
+command! -bar -nargs=0 W silent! exec "write !sudo tee % >/dev/null" | silent! edit!
 
 " Re-indent pasted text.
 nnoremap <Leader>p p'[v']=
