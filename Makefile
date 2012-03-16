@@ -1,9 +1,14 @@
 GIT := git
+ifeq ($(shell uname), Darwin)
+  VIM := mvim -v
+else
+  VIM := vim
+endif
 
 .PHONY: install_git_modules pull_git_modules update_vim_helptags
 
 update_vim_helptags:
-	vim -c 'call pathogen#helptags()|q'
+	$(VIM) -c 'call pathogen#helptags()|q'
 
 install_git_modules:
 	$(GIT) submodule init
