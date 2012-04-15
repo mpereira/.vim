@@ -1,3 +1,5 @@
+let g:mapleader = ","
+
 " load pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
@@ -112,9 +114,6 @@ au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 au FileType html       set omnifunc=htmlcomplete#CompleteTags
 au FileType css        set omnifunc=csscomplete#CompleteCSS
 au FileType xml        set omnifunc=xmlcomplete#CompleteTags
-
-" leader -> ,
-let g:mapleader = ","
 
 " ; -> :
 nnoremap ; :
