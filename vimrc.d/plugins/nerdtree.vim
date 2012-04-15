@@ -1,4 +1,4 @@
-nmap <silent> <Leader>n :NERDTreeToggle<CR>
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 " Let NERDTree change my working directory if its root changes
 let NERDTreeChDirMode=2
