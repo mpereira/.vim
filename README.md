@@ -13,14 +13,6 @@
     $ make install_git_modules
     $ echo "source ~/.vim/vimrc" > ~/.vimrc
 
-### Notes
-#### Command-T
-You also need to compile the Command-T's C extension.
-
-    $ cd ~/.vim/bundle/Command-T/ruby/command-t
-    $ ruby extconf.rb
-    $ make
-
 #### vim-ruby
 vim-ruby requires vim compiled with ruby support. To check if your current vim
 installation has ruby support, type:
@@ -41,7 +33,6 @@ with ruby support.
 
 ## Plugins Used
   - [CSApprox](https://github.com/vim-scripts/CSApprox)
-  - [Command-T](https://github.com/wincent/Command-T)
   - [Gist.vim](https://github.com/vim-scripts/Gist.vim)
   - [MatchTag](https://github.com/gregsexton/MatchTag)
   - [ack.vim](https://github.com/mileszs/ack.vim)

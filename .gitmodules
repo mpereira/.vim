@@ -30,10 +30,6 @@
 	path = bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
 	ignore = dirty
-[submodule "bundle/Command-T"]
-	path = bundle/Command-T
-	url = git://github.com/wincent/Command-T.git
-	ignore = dirty
 [submodule "bundle/vim-ragtag"]
 	path = bundle/vim-ragtag
 	url = git://github.com/tpope/vim-ragtag.git
