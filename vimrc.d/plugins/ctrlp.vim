@@ -6,3 +6,4 @@ let g:ctrlp_match_window_reversed = 1
 let g:ctrlp_split_window = 0
 let g:ctrlp_max_height = 10
 let g:ctrlp_extensions = ['tag']
+let g:ctrlp_custom_ignore = 'build\|node_modules\|log'
