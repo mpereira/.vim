@@ -35,7 +35,7 @@ set foldmethod=indent  " fold based on indent
 set foldnestmax=3      " deepest fold is 3 levels
 set nofoldenable       " dont fold by default
 
-"set clipboard=unnamed  " yanked values piped to the clipboard
+set clipboard=unnamed  " yanked values piped to the clipboard
 set number             " show line numbers
 set ruler              " show the cursor position all the time
 set showcmd            " display incomplete commands
