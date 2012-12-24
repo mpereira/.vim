@@ -148,3 +148,9 @@
 [submodule "bundle/webapi-vim"]
 	path = bundle/webapi-vim
 	url = https://github.com/mattn/webapi-vim.git
+[submodule "bundle/vim-cuteErrorMarker"]
+	path = bundle/vim-cuteErrorMarker
+	url = https://github.com/Twinside/vim-cuteErrorMarker.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
