@@ -60,7 +60,8 @@ set list
 set listchars=tab:»⋅,trail:⋅,nbsp:⋅
 
 set wildmenu                            " C-n and C-p scroll through matches
-set wildmode=list:longest               " cmdline tab completion
+set wildchar=<TAB>                      " start wild expansion in the command l ine using <TAB>
+set wildmode=list:longest               " cmdline " tab completion
 set wildignore=*.o,*.obj,*~,*.beam,.git " stuff to ignore when tab completing
 
 " allow backspacing over everything in insert mode
