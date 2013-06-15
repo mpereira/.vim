@@ -6,6 +6,9 @@
   - git
   - ruby
   - vim compiled with ruby support
+  - build-essential
+  - cmake
+  - python-dev
 
 ## Installation
     $ git clone git://github.com/mpereira/vimfiles ~/.vim

@@ -142,11 +142,8 @@ command! -bar -nargs=0 W silent! exec "write !sudo tee % >/dev/null" | silent! e
 nnoremap <Leader>p p'[v']=
 nnoremap <Leader>P P'[v']=
 
-" Automatically reload vimrc when it's saved.
-augroup AutoReloadVimRC
-  au!
-  au BufWritePost vimrc so $MYVIMRC
-augroup END
+" Automatically reload vimrc when it's saved
+au BufWritePost .vimrc so $MYVIMRC
 
 " <C-L> clear highlights
 if exists(":nohls")
