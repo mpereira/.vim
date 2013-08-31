@@ -15,6 +15,7 @@
     $ cd ~/.vim
     $ make install_git_modules
     $ echo "source ~/.vim/vimrc" > ~/.vimrc
+    $ cd bundle/vimproc && make && cd ../..
 
 #### vim-ruby
 vim-ruby requires vim compiled with ruby support. To check if your current vim

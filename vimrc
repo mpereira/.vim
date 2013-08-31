@@ -31,15 +31,16 @@ set expandtab          " expand tabs to spaces
 set smartindent        " use intelligent indentention
 set autoindent         " use indentention of previous line
 
-set foldmethod=indent  " fold based on indent
+set foldmethod=syntax  " fold based on syntax
+set foldlevelstart=99  " fold based on syntax
 set foldnestmax=3      " deepest fold is 3 levels
 set nofoldenable       " dont fold by default
 
-set clipboard=unnamed  " yanked values piped to the clipboard
+set clipboard=unnamed  " yanked values are piped to the system clipboard
 set number             " show line numbers
 set ruler              " show the cursor position all the time
 set showcmd            " display incomplete commands
-set showmatch          " highlight matching braces
+set showmatch          " highlight matching parenthesis, braces and brackets
 set wrap               " wrap lines automatically
 set ttyfast            " tell vim that our terminal is fast
 set novisualbell       " don't blink
@@ -49,6 +50,7 @@ set scrolloff=3        " minimal number of lines above and below the cursor
 set nowritebackup      " don't save backup files
 set autowrite          " flush external changes on open files
 set laststatus=2       " show status line
+set noshowmode         " Powerline already shows the mode
 set hidden             " don't lose undo history when changing buffers
 set lazyredraw         " do not redraw while running macros
 set noswapfile         " no swap file
@@ -115,56 +117,16 @@ au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 au FileType html       set omnifunc=htmlcomplete#CompleteTags
 au FileType css        set omnifunc=csscomplete#CompleteCSS
 au FileType xml        set omnifunc=xmlcomplete#CompleteTags
-
-" ; -> :
-nnoremap ; :
-
-" <F2> toggles paste mode
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
-
-" Don't show the help screen on <F1>
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
-
-" Use regular regexps
-nnoremap / /\v
-vnoremap / /\v
-
-" Yank from cursor to EOL
-nnoremap Y y$
+au FileType pl         set omnifunc=prologcomplete#CompleteTags
 
 " Force saving files that require root.
 command! -bar -nargs=0 W silent! exec "write !sudo tee % >/dev/null" | silent! edit!
 
-" Re-indent pasted text.
-nnoremap <Leader>p p'[v']=
-nnoremap <Leader>P P'[v']=
-
 " Automatically reload vimrc when it's saved
 au BufWritePost .vimrc so $MYVIMRC
 
-" <C-L> clear highlights
-if exists(":nohls")
-  nnoremap <silent> <C-L> :nohlsearch<CR>
-  inoremap <C-L> <C-O>:nohlsearch<CR>
-endif
-
-" :help
-nnoremap <leader>hh :help<Space>
-
 " keeping history data
 set viminfo='10,\"30,:20,%,n~/.viminfo
-
-" Removes trailing whitespaces
-nnoremap <silent> <leader>f :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-
-" Open vsplit and switch over to it
-nnoremap <leader>vs <C-w>v<C-w>l
-
-" Open hsplit and switch over to it
-nnoremap <leader>hs <C-w>s<C-w>j
 
 " jump to last cursor position when opening a file
 " dont do it when writing a commit log entry

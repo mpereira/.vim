@@ -1,4 +1,5 @@
-map <Leader>gs :Gstatus<CR>
-map <Leader>gc :Gcommit<CR>
-map <Leader>gp :Git push<CR>
-map <Leader>gb :Gblame<CR>
+map <leader>gb :Gblame<cr>
+map <leader>gc :Gcommit<cr>
+map <leader>gd :Gdiff<cr>
+map <leader>gp :Git push<cr>
+map <leader>gs :Gstatus<cr>
