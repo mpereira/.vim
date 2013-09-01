@@ -110,14 +110,18 @@ au BufRead,BufNewFile .rvmrc          set filetype=sh
 au BufRead,BufNewFile *.markdown,*.md set filetype=markdown
 
 " omni completion
-au FileType ruby,eruby set omnifunc=rubycomplete#Complete
-au FileType python     set omnifunc=pythoncomplete#Complete
-au FileType c          set omnifunc=ccomplete#Complete
-au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-au FileType html       set omnifunc=htmlcomplete#CompleteTags
-au FileType css        set omnifunc=csscomplete#CompleteCSS
-au FileType xml        set omnifunc=xmlcomplete#CompleteTags
-au FileType pl         set omnifunc=prologcomplete#CompleteTags
+au FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
+au FileType python     setlocal omnifunc=pythoncomplete#Complete
+au FileType c          setlocal omnifunc=ccomplete#Complete
+au FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+au FileType html       setlocal omnifunc=htmlcomplete#CompleteTags
+au FileType css        setlocal omnifunc=csscomplete#CompleteCSS
+au FileType xml        setlocal omnifunc=xmlcomplete#CompleteTags
+au FileType pl         setlocal omnifunc=prologcomplete#CompleteTags
+autocmd filetype *
+        \ if &omnifunc == "" |
+        \   setlocal omnifunc=syntaxcomplete#Complete |
+        \ endif
 
 " Force saving files that require root.
 command! -bar -nargs=0 W silent! exec "write !sudo tee % >/dev/null" | silent! edit!
