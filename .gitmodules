@@ -168,6 +168,9 @@
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "bundle/floobits-vim"]
+	path = bundle/floobits-vim
+	url = https://github.com/Floobits/floobits-vim
 [submodule "bundle/vim-qargs"]
 	path = bundle/vim-qargs
 	url = https://github.com/nelstrom/vim-qargs.git
