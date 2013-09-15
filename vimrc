@@ -32,7 +32,7 @@ set foldlevelstart=99  " fold based on syntax
 set foldnestmax=3      " deepest fold is 3 levels
 set nofoldenable       " dont fold by default
 
-set clipboard=unnamed  " yanked values are piped to the system clipboard
+set clipboard=unnamedplus " Yanked values are piped to the X window clipboard.
 set number             " show line numbers
 set ruler              " show the cursor position all the time
 set showcmd            " display incomplete commands
