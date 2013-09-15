@@ -85,20 +85,10 @@ set colorcolumn=81
 syntax on
 colorscheme jellybeans
 
-" filetypes
-au BufRead,BufNewFile Rakefile        set filetype=ruby
-au BufRead,BufNewFile rakefile        set filetype=ruby
-au BufRead,BufNewFile *.rake          set filetype=ruby
-au BufRead,BufNewFile .irbrc          set filetype=ruby
-au BufRead,BufNewFile *.rjs           set filetype=ruby
-au BufRead,BufNewFile *.rhtml         set filetype=eruby
-au BufRead,BufNewFile *.html.erb      set filetype=eruby
-au BufRead,BufNewFile *.ldg           set filetype=ledger
-au BufRead,BufNewFile *.feature       set filetype=cucumber
 au BufRead,BufNewFile *.escript       set filetype=erlang
-au BufRead,BufNewFile .vimperatorrc   set filetype=vim
+au BufRead,BufNewFile *gvimrc         set filetype=vim
+au BufRead,BufNewFile *pentadactylrc  set filetype=vim
 au BufRead,BufNewFile .rvmrc          set filetype=sh
-au BufRead,BufNewFile *.markdown,*.md set filetype=markdown
 
 " omni completion
 au FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
