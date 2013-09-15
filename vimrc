@@ -82,18 +82,6 @@ set colorcolumn=81
 syntax on
 colorscheme jellybeans
 
-" GUI options
-if has("gui_running")
-  set guifont=Monaco\ for\ Powerline\ 10
-  set guioptions-=T          " no toolbar
-  set guioptions-=m          " no menu
-  set guioptions-=r          " no right side scrollbar
-  set guioptions-=L          " no left side scrollbar
-  set guioptions+=c          " console messages rather than GUI dialogs
-  set guicursor+=a:blinkon0  " no cursor blinking
-  set mousehide              " hide mouse when start typing
-endif
-
 " filetypes
 au BufRead,BufNewFile Rakefile        set filetype=ruby
 au BufRead,BufNewFile rakefile        set filetype=ruby
