@@ -93,8 +93,8 @@ au BufRead,BufNewFile .rvmrc          set filetype=sh
 " Save file as root.
 command! -bar -nargs=0 W silent! exec "write !sudo tee % >/dev/null" | silent! edit!
 
-" Automatically reload vimrc when it's saved
-au BufWritePost .vimrc so $MYVIMRC
+" Reload vimrc on save.
+au BufWritePost vimrc,.vimrc so $MYVIMRC
 
 " keeping history data
 set viminfo='10,\"30,:20,%,n~/.vim/info
