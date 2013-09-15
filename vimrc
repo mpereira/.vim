@@ -12,7 +12,6 @@ call pathogen#infect()
 runtime! vimrc.d/**/*.vim
 
 " enable filetype detection
-filetype plugin on
 filetype plugin indent on
 
 set nocompatible       " disable vi compatibility
