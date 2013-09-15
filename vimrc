@@ -97,7 +97,7 @@ command! -bar -nargs=0 W silent! exec "write !sudo tee % >/dev/null" | silent! e
 au BufWritePost .vimrc so $MYVIMRC
 
 " keeping history data
-set viminfo='10,\"30,:20,%,n~/.viminfo
+set viminfo='10,\"30,:20,%,n~/.vim/info
 
 " jump to last cursor position when opening a file
 " dont do it when writing a commit log entry
