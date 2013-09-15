@@ -1,14 +1,11 @@
 let g:mapleader = ","
 
-" load pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-" Load external runtime.
 runtime! vimrc.d/**/*.vim
 
-" enable filetype detection
-filetype plugin indent on
+filetype plugin indent on " enable filetype detection
 
 set nocompatible       " disable vi compatibility
 set background=dark    " assume a dark background
