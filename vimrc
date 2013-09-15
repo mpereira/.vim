@@ -90,20 +90,6 @@ au BufRead,BufNewFile *gvimrc         set filetype=vim
 au BufRead,BufNewFile *pentadactylrc  set filetype=vim
 au BufRead,BufNewFile .rvmrc          set filetype=sh
 
-" omni completion
-au FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
-au FileType python     setlocal omnifunc=pythoncomplete#Complete
-au FileType c          setlocal omnifunc=ccomplete#Complete
-au FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-au FileType html       setlocal omnifunc=htmlcomplete#CompleteTags
-au FileType css        setlocal omnifunc=csscomplete#CompleteCSS
-au FileType xml        setlocal omnifunc=xmlcomplete#CompleteTags
-au FileType pl         setlocal omnifunc=prologcomplete#CompleteTags
-autocmd filetype *
-        \ if &omnifunc == "" |
-        \   setlocal omnifunc=syntaxcomplete#Complete |
-        \ endif
-
 " Force saving files that require root.
 command! -bar -nargs=0 W silent! exec "write !sudo tee % >/dev/null" | silent! edit!
 
