@@ -194,3 +194,6 @@
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
 	ignore = dirty
+[submodule "bundle/Vim-R-plugin"]
+	path = bundle/Vim-R-plugin
+	url = https://github.com/jcfaria/Vim-R-plugin.git
