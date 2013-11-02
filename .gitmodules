@@ -46,10 +46,6 @@
 	path = bundle/Gist.vim
 	url = https://github.com/vim-scripts/Gist.vim.git
 	ignore = dirty
-[submodule "bundle/vim-autoclose"]
-	path = bundle/vim-autoclose
-	url = https://github.com/Townk/vim-autoclose.git
-	ignore = dirty
 [submodule "bundle/c.vim"]
 	path = bundle/c.vim
 	url = https://github.com/vim-scripts/c.vim.git
