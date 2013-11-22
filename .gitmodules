@@ -234,3 +234,7 @@
 	path = bundle/JavaScript-Indent
 	url = https://github.com/vim-scripts/JavaScript-Indent.git
 	ignore = dirty
+[submodule "bundle/vim-scratch"]
+	path = bundle/vim-scratch
+	url = https://github.com/duff/vim-scratch.git
+	ignore = dirty
