@@ -242,3 +242,7 @@
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
 	ignore = dirty
+[submodule "bundle/Dockerfile.vim"]
+	path = bundle/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
+	ignore = dirty
