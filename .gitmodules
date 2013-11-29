@@ -246,8 +246,8 @@
 	path = bundle/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
 	ignore = dirty
-[submodule "bundle/vim-gitgutters"]
-	path = bundle/vim-gitgutters
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
 	ignore = dirty
 [submodule "bundle/vim-easymotion"]
