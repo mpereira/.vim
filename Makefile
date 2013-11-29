@@ -1,23 +1,21 @@
-GIT                     := git
+GIT                             := git
+VIM                             := vim
 
-SBT_VERSION             := 0.13.0
-SBT_RELEASE_DEB         := sbt.deb
-SBT_DEB_URL             := http://repo.scala-sbt.org/scalasbt/sbt-native-packages/org/scala-sbt/sbt/$(SBT_VERSION)/$(SBT_RELEASE_DEB)
+SBT_VERSION                     := 0.13.0
+SBT_RELEASE_DEB                 := sbt.deb
+SBT_DEB_URL                     := http://repo.scala-sbt.org/scalasbt/sbt-native-packages/org/scala-sbt/sbt/$(SBT_VERSION)/$(SBT_RELEASE_DEB)
 
-ECLIPSE_RELEASE         := kepler
-ECLIPSE_HOME            := $(HOME)/.eclipse
-ECLIPSE_RELEASE_ARCHIVE := eclipse-standard-$(ECLIPSE_RELEASE)-R-linux-gtk-x86_64.tar.gz
-ECLIPSE_ARCHIVE_URL     := http://espelhos.edugraf.ufsc.br/eclipse//technology/epp/downloads/release/$(ECLIPSE_RELEASE)/R/$(ECLIPSE_RELEASE_ARCHIVE)
+ECLIPSE_RELEASE                 := kepler
+ECLIPSE_HOME                    := $(HOME)/.eclipse
+ECLIPSE_RELEASE_ARCHIVE         := eclipse-standard-$(ECLIPSE_RELEASE)-R-linux-gtk-x86_64.tar.gz
+ECLIPSE_ARCHIVE_URL             := http://espelhos.edugraf.ufsc.br/eclipse//technology/epp/downloads/release/$(ECLIPSE_RELEASE)/R/$(ECLIPSE_RELEASE_ARCHIVE)
 
-ECLIM_VERSION           := 2.3.2
-ECLIM_JAR               := eclim_$(ECLIM_VERSION).jar
-ECLIM_JAR_URL           := http://sourceforge.net/projects/eclim/files/eclim/$(ECLIM_VERSION)/$(ECLIM_JAR)/download
+ECLIM_VERSION                   := 2.3.2
+ECLIM_JAR                       := eclim_$(ECLIM_VERSION).jar
+ECLIM_JAR_URL                   := http://sourceforge.net/projects/eclim/files/eclim/$(ECLIM_VERSION)/$(ECLIM_JAR)/download
 
-ifeq ($(shell uname), Darwin)
-  VIM := mvim -v
-else
-  VIM := vim
-endif
+LEININGEN_STABLE_BIN_URL        := https://raw.github.com/technomancy/leiningen/stable/bin/lein
+LEININGEN_INSTALLATION_BIN_PATH := /usr/bin/lein
 
 .PHONY: \
         eclim \
@@ -34,6 +32,7 @@ vim:
 	wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2 -P /tmp
 	tar -xjvf /tmp/vim-7.4.tar.bz2 -C /tmp
 	cd /tmp/vim74 && ./configure \
+		--enable-fail-if-missing \
 		--disable-darwin \
 		--enable-luainterp \
 		--enable-perlinterp \
@@ -43,7 +42,7 @@ vim:
 		--enable-cscope \
 		--disable-netbeans \
 		--enable-multibyte \
-		--enable-multibyte \
+		--with-luajit \
 		--with-features=huge \
 		--with-compiledby='Murilo Pereira <murilo@murilopereira.com>'
 	cd /tmp/vim74 && make
@@ -81,6 +80,10 @@ eclim: eclipse_eclim_plugins
 		-jar /tmp/$(ECLIM_JAR) install
 	mkdir bundle/eclim
 	mv eclim plugin target bundle/eclim
+
+leiningen:
+	wget --no-check-certificate -O $(LEININGEN_INSTALLATION_BIN_PATH) $(LEININGEN_STABLE_BIN_URL)
+	chmod 755 $(LEININGEN_INSTALLATION_BIN_PATH)
 
 update_vim_helptags:
 	$(VIM) -c 'call pathogen#helptags()|q'

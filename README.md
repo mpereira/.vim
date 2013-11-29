@@ -1,39 +1,27 @@
 # vimfiles
 
 ## Dependencies
+  - Ruby 2.0
+  - Java 1.7 (if you want to use eclim)
+  - Scala 2.10 (if you want to use eclim)
+  - Eclipse 4.3 (if you want to use eclim)
+
   - ack
-  - ctags
-  - git
-  - ruby
-  - vim compiled with ruby support
   - build-essential
   - cmake
-  - python-dev
+  - exuberant-ctags
+  - git
+  - liblua5.1-0-dev
+  - libluajit-5.1-dev
+  - libperl-dev
+  - libpython2.7-dev
+  - libpython3.3-dev
+  - luajit
 
 ## Installation
     $ git clone git://github.com/mpereira/vimfiles ~/.vim
     $ cd ~/.vim
-    $ make install_git_modules
-    $ echo "source ~/.vim/vimrc" > ~/.vimrc
-    $ cd bundle/vimproc && make && cd ../..
-
-#### vim-ruby
-vim-ruby requires vim compiled with ruby support. To check if your current vim
-installation has ruby support, type:
-
-    $ vim --version | grep ruby
-
-If the output contains `+ruby` you're good to go. If not, you must compile vim
-with ruby support.
-
-    $ wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
-    $ tar xvfj vim-7.3.tar.bz2
-    $ cd vim73
-    $ ./configure --enable-rubyinterp
-    $ make && sudo make install
-
-#### Gist.vim
-  To make Gist.vim work you need to set your github token in ~/.gitconfig.
+    $ make install
 
 ## Plugins Used
   - [CSApprox](https://github.com/vim-scripts/CSApprox)
