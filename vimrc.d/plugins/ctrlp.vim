@@ -4,7 +4,7 @@ let g:ctrlp_map = '<leader>cp'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 10
 let g:ctrlp_extensions = ['tag', 'changes']
-let g:ctrlp_custom_ignore = 'node_modules$\|.DS_Store$\|.git$\|build$\|.log$'
+let g:ctrlp_custom_ignore = 'node_modules$\|\.DS_Store$\|\.git$\|build$\|\.log$'
 
 nnoremap <leader>cb :CtrlPBuffer<cr>
 nnoremap <leader>cc :CtrlPChange<cr>
