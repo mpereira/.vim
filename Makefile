@@ -94,5 +94,5 @@ install_git_modules:
 	@make --no-print-directory update_vim_helptags
 
 pull_git_modules:
-	$(GIT) submodule foreach $(GIT) pull origin master
+	until $(GIT) submodule foreach $(GIT) pull origin master; do :; done
 	@make --no-print-directory update_vim_helptags
