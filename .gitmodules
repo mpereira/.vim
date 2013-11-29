@@ -214,6 +214,46 @@
 	path = bundle/paredit.vim
 	url = https://github.com/vim-scripts/paredit.vim.git
 	ignore = dirty
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
+	ignore = dirty
+[submodule "bundle/unite.vim"]
+	path = bundle/unite.vim
+	url = https://github.com/Shougo/unite.vim.git
+	ignore = dirty
+[submodule "bundle/prolog.vim"]
+	path = bundle/prolog.vim
+	url = https://github.com/adimit/prolog.vim.git
+	ignore = dirty
+[submodule "bundle/vimshell.vim"]
+	path = bundle/vimshell.vim
+	url = https://github.com/Shougo/vimshell.vim.git
+	ignore = dirty
+[submodule "bundle/vimproc.vim"]
+	path = bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+	ignore = dirty
+[submodule "bundle/vim-orgmode"]
+	path = bundle/vim-orgmode
+	url = https://github.com/jceb/vim-orgmode.git
+	ignore = dirty
+[submodule "bundle/vim-io"]
+	path = bundle/vim-io
+	url = https://github.com/xhr/vim-io.git
+	ignore = dirty
+[submodule "bundle/vim-indent-guides"]
+	path = bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
+	ignore = dirty
+[submodule "bundle/vim-gitgutters"]
+	path = bundle/vim-gitgutters
+	url = https://github.com/airblade/vim-gitgutter.git
+	ignore = dirty
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion
+	ignore = dirty
 [submodule "bundle/matchit.zip"]
 	path = bundle/matchit.zip
 	url = https://github.com/vim-scripts/matchit.zip.git
@@ -225,6 +265,10 @@
 [submodule "bundle/vim-textobj-rubyblock"]
 	path = bundle/vim-textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+	ignore = dirty
+[submodule "bundle/ri.vim"]
+	path = bundle/ri.vim
+	url = https://github.com/danchoi/ri.vim.git
 	ignore = dirty
 [submodule "bundle/vim-javascript-syntax"]
 	path = bundle/vim-javascript-syntax
