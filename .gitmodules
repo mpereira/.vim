@@ -40,7 +40,7 @@
 	ignore = dirty
 [submodule "bundle/vim-rake"]
 	path = bundle/vim-rake
-	url = http://github.com/tpope/vim-rake.git
+	url = https://github.com/tpope/vim-rake.git
 	ignore = dirty
 [submodule "bundle/Gist.vim"]
 	path = bundle/Gist.vim
