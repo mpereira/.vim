@@ -1,5 +1,9 @@
 let g:mapleader = ','
 
+let g:pathogen_disabled = []
+
+call add(g:pathogen_disabled, 'eclim')
+
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
