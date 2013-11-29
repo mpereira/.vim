@@ -1,4 +1,6 @@
-# vimfiles
+# .vim
+
+[mpereira](https://github.com/mpereira)'s Vim configuration files.
 
 ## Dependencies
   - Ruby 2.0
@@ -21,6 +23,9 @@
     $ git clone git://github.com/mpereira/vimfiles ~/.vim
     $ cd ~/.vim
     $ make install
+
+## Color scheme
+  [jellybeans](https://github.com/vim-scripts/jellybeans.vim)
 
 ## Plugins Used
   - [a.vim](https://github.com/vim-scripts/a.vim.git)
@@ -97,8 +102,8 @@
   - [vimshell.vim](https://github.com/Shougo/vimshell.vim.git)
   - [webapi-vim](https://github.com/mattn/webapi-vim.git)
 
-## Colorscheme:
-  [jellybeans](https://github.com/vim-scripts/jellybeans.vim)
-
 ## Author
   [Murilo Pereira](http://murilopereira.com)
+
+## License
+  [MIT](http://opensource.org/licenses/MIT)
