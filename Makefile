@@ -26,7 +26,7 @@ LEININGEN_INSTALLATION_BIN_PATH := /usr/bin/lein
         sbt \
         update_vim_helptags \
         vim \
-        vimproc
+        vimproc.vim
 
 vim:
 	wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2 -P /tmp
@@ -48,8 +48,8 @@ vim:
 	cd /tmp/vim74 && make
 	cd /tmp/vim74 && sudo make install
 
-vimproc:
-	cd bundle/vimproc && make
+vimproc.vim:
+	cd bundle/vimproc.vim && make
 
 sbt:
 	wget $(SBT_DEB_URL) -P /tmp
