@@ -290,3 +290,6 @@
 	path = bundle/Dockerfile.vim
 	url = https://github.com/ekalinin/Dockerfile.vim.git
 	ignore = dirty
+[submodule "bundle/jsx.vim"]
+	path = bundle/jsx.vim
+	url = https://github.com/jsx/jsx.vim.git
