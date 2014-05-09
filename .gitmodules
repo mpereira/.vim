@@ -297,3 +297,6 @@
 [submodule "bundle/octave.vim--"]
 	path = bundle/octave.vim--
 	url = https://github.com/vim-scripts/octave.vim--.git
+[submodule "bundle/VimJSXHint"]
+	path = bundle/VimJSXHint
+	url = https://github.com/jordwalke/VimJSXHint.git
