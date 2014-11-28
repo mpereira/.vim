@@ -23,7 +23,7 @@ nnoremap Y y$
 " too often.
 nnoremap K <nop>
 
-" TODO: Why doesn't this work?
+" Quick alternate buffer.
 nnoremap <leader>, <c-^>
 
 " <c-L> clear highlights

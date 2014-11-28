@@ -1,3 +1,5 @@
+map <Leader> <Plug>(easymotion-prefix)
+
 let g:EasyMotion_keys = 'asdfghjkl;'
 
 let g:EasyMotion_mapping_f = '<leader>mc'
