@@ -29,11 +29,10 @@ LEININGEN_INSTALLATION_BIN_PATH := /usr/bin/lein
         vimproc.vim
 
 vim:
-	wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2 -P /tmp
+	wget -nc ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2 -P /tmp
 	tar -xjvf /tmp/vim-7.4.tar.bz2 -C /tmp
 	cd /tmp/vim74 && ./configure \
 		--enable-fail-if-missing \
-		--disable-darwin \
 		--enable-luainterp \
 		--enable-perlinterp \
 		--enable-pythoninterp \
@@ -45,6 +44,8 @@ vim:
 		--with-luajit \
 		--with-features=huge \
 		--with-compiledby='Murilo Pereira <murilo@murilopereira.com>'
+	cp patches/os_unix_c_830_13_error_conflicting_types_for_sigaltstack_fix.diff /tmp/vim74
+	cd /tmp/vim74 && git apply os_unix_c_830_13_error_conflicting_types_for_sigaltstack_fix.diff
 	cd /tmp/vim74 && make
 	cd /tmp/vim74 && sudo make install
 
