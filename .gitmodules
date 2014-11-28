@@ -297,3 +297,6 @@
 [submodule "bundle/VimSplitBalancer"]
 	path = bundle/VimSplitBalancer
 	url = https://github.com/jordwalke/VimSplitBalancer.git
+[submodule "bundle/splitjoin.vim"]
+	path = bundle/splitjoin.vim
+	url = https://github.com/AndrewRadev/splitjoin.vim.git
