@@ -1,3 +1,6 @@
+" TODO: Clear all mappings. Should I do this?
+" mapclear
+
 " ; -> :.
 nnoremap ; :
 
@@ -20,10 +23,8 @@ nnoremap Y y$
 " too often.
 nnoremap K <nop>
 
-map <leader>, <c-^>
-
-" copy to system clipboard
-xmap <leader>y "+y
+" TODO: Why doesn't this work?
+nnoremap <leader>, <c-^>
 
 " <c-L> clear highlights
 nnoremap <silent> <c-l> :nohlsearch<cr>
@@ -43,3 +44,23 @@ nnoremap <leader>vs <c-w>v<c-w>l
 
 " Open hsplit and switch over to it.
 nnoremap <leader>hs <c-w>s<c-w>j
+
+" Tabs.
+nnoremap <leader>( :tabprev<cr>
+nnoremap <leader>) :tabnext<cr>
+
+" Don't move on *
+" I'd use a function for this but Vim clobbers the last search when you're in
+" a function so fuck it, practicality beats purity.
+nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
+
+" Space to toggle folds.
+nnoremap <Space> za
+vnoremap <Space> za
+
+" Make zO recursively open whatever fold we're in, even if it's partially open.
+nnoremap zO zczO
+
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
