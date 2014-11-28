@@ -2,6 +2,7 @@ let g:mapleader = ','
 
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'eclim')
+call add(g:pathogen_disabled, 'floobits-vim')
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
