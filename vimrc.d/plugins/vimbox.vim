@@ -1,0 +1,1 @@
+let g:jsCommand='node'
