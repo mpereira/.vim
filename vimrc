@@ -100,6 +100,7 @@ au BufRead,BufNewFile *.escript       set filetype=erlang
 au BufRead,BufNewFile *gvimrc         set filetype=vim
 au BufRead,BufNewFile *pentadactylrc  set filetype=vim
 au BufRead,BufNewFile .rvmrc          set filetype=sh
+au BufRead,BufNewFile *.jsx.erb       setlocal filetype=javascript
 
 " Save file as root.
 command! -bar -nargs=0 W silent! exec "write !sudo tee % >/dev/null" | silent! edit!
