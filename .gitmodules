@@ -294,3 +294,6 @@
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "bundle/VimSplitBalancer"]
+	path = bundle/VimSplitBalancer
+	url = https://github.com/jordwalke/VimSplitBalancer.git
