@@ -65,6 +65,7 @@
   - [vim-clojure-static](https://github.com/guns/vim-clojure-static.git)
   - [vim-cucumber](https://github.com/tpope/vim-cucumber.git)
   - [vim-cuteErrorMarker](https://github.com/Twinside/vim-cuteErrorMarker.git)
+  - [vim-dispatch](https://github.com/tpope/vim-dispatch.git)
   - [vim-easymotion](https://github.com/Lokaltog/vim-easymotion)
   - [vim-easytags](https://github.com/xolox/vim-easytags.git)
   - [vim-endwise](https://github.com/tpope/vim-endwise.git)
