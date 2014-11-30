@@ -300,3 +300,6 @@
 [submodule "bundle/splitjoin.vim"]
 	path = bundle/splitjoin.vim
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
+[submodule "bundle/vim-leiningen"]
+	path = bundle/vim-leiningen
+	url = https://github.com/tpope/vim-leiningen.git

@@ -76,6 +76,7 @@
   - [vim-io](https://github.com/xhr/vim-io.git)
   - [vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax.git)
   - [vim-jst](https://github.com/briancollins/vim-jst.git)
+  - [vim-leiningen](https://github.com/tpope/vim-leiningen.git)
   - [vim-less](https://github.com/lunaru/vim-less.git)
   - [vim-markdown](https://github.com/plasticboy/vim-markdown.git)
   - [vim-misc](https://github.com/xolox/vim-misc.git)
