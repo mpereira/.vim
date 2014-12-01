@@ -47,7 +47,6 @@
   - [MatchTag](https://github.com/gregsexton/MatchTag.git)
   - [nerdtree](https://github.com/scrooloose/nerdtree.git)
   - [NrrRgn](https://github.com/chrisbra/NrrwRgn.git)
-  - [paredit.vim](https://github.com/vim-scripts/paredit.vim.git)
   - [prolog.vim](https://github.com/adimit/prolog.vim.git)
   - [rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim.git)
   - [ri.vim](https://github.com/danchoi/ri.vim.git)
