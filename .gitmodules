@@ -305,3 +305,9 @@
 [submodule "bundle/vim-pasta"]
 	path = bundle/vim-pasta
 	url = https://github.com/sickill/vim-pasta.git
+[submodule "bundle/vim-sexp"]
+	path = bundle/vim-sexp
+	url = https://github.com/guns/vim-sexp.git
+[submodule "bundle/vim-sexp-mapping-for-regular-people"]
+	path = bundle/vim-sexp-mapping-for-regular-people
+	url = https://github.com/tpope/vim-sexp-mappings-for-regular-people.git

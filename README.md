@@ -93,6 +93,8 @@
   - [vim-ruby](https://github.com/vim-ruby/vim-ruby.git)
   - [vim-scala](https://github.com/derekwyatt/vim-scala.git)
   - [vim-scratch](https://github.com/duff/vim-scratch.git)
+  - [vim-sexp](https://github.com/guns/vim-sexp.git)
+  - [vim-sexp-mapping-for-regular-people](https://github.com/tpope/vim-sexp-mappings-for-regular-people.git)
   - [vim-snipmate](https://github.com/garbas/vim-snipmate.git)
   - [vim-snippets](https://github.com/honza/vim-snippets.git)
   - [vim-surround](https://github.com/tpope/vim-surround.git)
