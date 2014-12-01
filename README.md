@@ -83,6 +83,7 @@
   - [vim-misc](https://github.com/xolox/vim-misc.git)
   - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors.git)
   - [vim-orgmode](https://github.com/jceb/vim-orgmode.git)
+  - [vim-pasta](https://github.com/sickill/vim-pasta.git)
   - [vim-pathogen](https://github.com/tpope/vim-pathogen.git)
   - [vim-qargs](https://github.com/nelstrom/vim-qargs.git)
   - [Vim-R-plugin](https://github.com/jcfaria/Vim-R-plugin.git)
