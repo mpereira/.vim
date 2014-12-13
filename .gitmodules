@@ -281,33 +281,44 @@
 [submodule "bundle/octave.vim--"]
 	path = bundle/octave.vim--
 	url = https://github.com/vim-scripts/octave.vim--.git
+	ignore = dirty
 [submodule "bundle/VimJSXHint"]
 	path = bundle/VimJSXHint
 	url = https://github.com/jordwalke/VimJSXHint.git
+	ignore = dirty
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+	ignore = dirty
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+	ignore = dirty
 [submodule "bundle/VimSplitBalancer"]
 	path = bundle/VimSplitBalancer
 	url = https://github.com/jordwalke/VimSplitBalancer.git
+	ignore = dirty
 [submodule "bundle/splitjoin.vim"]
 	path = bundle/splitjoin.vim
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
+	ignore = dirty
 [submodule "bundle/vim-leiningen"]
 	path = bundle/vim-leiningen
 	url = https://github.com/tpope/vim-leiningen.git
+	ignore = dirty
 [submodule "bundle/vim-dispatch"]
 	path = bundle/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+	ignore = dirty
 [submodule "bundle/vim-pasta"]
 	path = bundle/vim-pasta
 	url = https://github.com/sickill/vim-pasta.git
+	ignore = dirty
 [submodule "bundle/vim-sexp"]
 	path = bundle/vim-sexp
 	url = https://github.com/guns/vim-sexp.git
+	ignore = dirty
 [submodule "bundle/vim-sexp-mapping-for-regular-people"]
 	path = bundle/vim-sexp-mapping-for-regular-people
 	url = https://github.com/tpope/vim-sexp-mappings-for-regular-people.git
+	ignore = dirty
