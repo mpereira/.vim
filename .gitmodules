@@ -342,3 +342,7 @@ ignore = dirty
 	path = bundle/vim-hoogle
 	url = https://github.com/Twinside/vim-hoogle.git
 	ignore = dirty
+[submodule "bundle/vim-slime"]
+	path = bundle/vim-slime
+	url = https://github.com/jpalardy/vim-slime.git
+	ignore = dirty
