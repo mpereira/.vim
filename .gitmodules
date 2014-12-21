@@ -346,3 +346,7 @@ ignore = dirty
 	path = bundle/vim-slime
 	url = https://github.com/jpalardy/vim-slime.git
 	ignore = dirty
+[submodule "bundle/jellybeans.vim"]
+	path = bundle/jellybeans.vim
+	url = https://github.com/nanotech/jellybeans.vim.git
+	ignore = dirty
