@@ -350,3 +350,6 @@ ignore = dirty
 	path = bundle/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim.git
 	ignore = dirty
+[submodule "bundle/Superior-Haskell-Interaction-Mode-SHIM"]
+	path = bundle/Superior-Haskell-Interaction-Mode-SHIM
+	url = https://github.com/vim-scripts/Superior-Haskell-Interaction-Mode-SHIM.git
