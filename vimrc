@@ -5,6 +5,7 @@ call add(g:pathogen_disabled, 'eclim')
 call add(g:pathogen_disabled, 'floobits-vim')
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime bundle/hindent/vim/hindent.vim
 call pathogen#infect()
 
 runtime! vimrc.d/**/*.vim

@@ -359,3 +359,6 @@ ignore = dirty
 [submodule "bundle/vim-textobj-haskell"]
 	path = bundle/vim-textobj-haskell
 	url = https://github.com/gilligan/vim-textobj-haskell.git
+[submodule "bundle/hindent"]
+	path = bundle/hindent
+	url = https://github.com/chrisdone/hindent.git
