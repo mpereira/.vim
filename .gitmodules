@@ -356,3 +356,6 @@ ignore = dirty
 [submodule "bundle/purescript-vim"]
 	path = bundle/purescript-vim
 	url = https://github.com/raichoo/purescript-vim.git
+[submodule "bundle/vim-textobj-haskell"]
+	path = bundle/vim-textobj-haskell
+	url = https://github.com/gilligan/vim-textobj-haskell.git
