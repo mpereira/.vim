@@ -362,3 +362,6 @@ ignore = dirty
 [submodule "bundle/hindent"]
 	path = bundle/hindent
 	url = https://github.com/chrisdone/hindent.git
+[submodule "bundle/vim-sneak"]
+	path = bundle/vim-sneak
+	url = https://github.com/justinmk/vim-sneak.git
