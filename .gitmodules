@@ -353,3 +353,6 @@ ignore = dirty
 [submodule "bundle/Superior-Haskell-Interaction-Mode-SHIM"]
 	path = bundle/Superior-Haskell-Interaction-Mode-SHIM
 	url = https://github.com/vim-scripts/Superior-Haskell-Interaction-Mode-SHIM.git
+[submodule "bundle/purescript-vim"]
+	path = bundle/purescript-vim
+	url = https://github.com/raichoo/purescript-vim.git
