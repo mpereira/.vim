@@ -374,3 +374,6 @@ ignore = dirty
 	path = bundle/vim-startify
 	url = https://github.com/mhinz/vim-startify.git
 	ignore = dirty
+[submodule "bundle/tmuxline.vim"]
+	path = bundle/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim.git

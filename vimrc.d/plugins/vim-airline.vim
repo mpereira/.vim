@@ -10,20 +10,20 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
-let g:airline_symbols.paste = 'P'
+let g:airline_symbols.paste = 'p'
 
 let g:airline_mode_map = {
   \ '__' : '-',
-  \ 'n'  : 'N',
-  \ 'i'  : 'I',
-  \ 'R'  : 'R',
-  \ 'c'  : 'C',
-  \ 'v'  : 'V',
-  \ 'V'  : 'V',
-  \ '' : 'V',
-  \ 's'  : 'S',
-  \ 'S'  : 'S',
-  \ '' : 'S',
+  \ 'n'  : 'n',
+  \ 'i'  : 'i',
+  \ 'R'  : 'r',
+  \ 'c'  : 'c',
+  \ 'v'  : 'v',
+  \ 'V'  : 'v',
+  \ '' : 'v',
+  \ 's'  : 's',
+  \ 'S'  : 's',
+  \ '' : 's',
 \ }
 
 function! FileEncodingAndFormat()
