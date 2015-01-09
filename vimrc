@@ -131,3 +131,7 @@ command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
   \ fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non
   \ proident, sunt in culpa qui officia deserunt mollit anim id est
   \ laborum.
+
+" Toggle spell check when entering/leaving insert mode.
+autocmd InsertEnter * setlocal spell
+autocmd InsertLeave * setlocal nospell

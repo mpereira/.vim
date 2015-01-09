@@ -77,3 +77,6 @@ nnoremap <leader>q :q<CR>
 " Swap words to left and right.
 nnoremap <silent> <e "_yiw?\w\+\_W\+\%#<CR>:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>:nohls<cr>
 nnoremap <silent> >e "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\_W\+<CR>:nohls<cr>
+
+" Toggle spell-checking.
+nnoremap <silent> <leader>sp :set spell!<cr>
