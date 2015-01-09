@@ -337,7 +337,7 @@ ignore = dirty
 [submodule "bundle/neco-ghc"]
 	path = bundle/neco-ghc
 	url = https://github.com/eagletmt/neco-ghc.git
-ignore = dirty
+	ignore = dirty
 [submodule "bundle/vim-hoogle"]
 	path = bundle/vim-hoogle
 	url = https://github.com/Twinside/vim-hoogle.git
@@ -353,18 +353,23 @@ ignore = dirty
 [submodule "bundle/Superior-Haskell-Interaction-Mode-SHIM"]
 	path = bundle/Superior-Haskell-Interaction-Mode-SHIM
 	url = https://github.com/vim-scripts/Superior-Haskell-Interaction-Mode-SHIM.git
+	ignore = dirty
 [submodule "bundle/purescript-vim"]
 	path = bundle/purescript-vim
 	url = https://github.com/raichoo/purescript-vim.git
+	ignore = dirty
 [submodule "bundle/vim-textobj-haskell"]
 	path = bundle/vim-textobj-haskell
 	url = https://github.com/gilligan/vim-textobj-haskell.git
+	ignore = dirty
 [submodule "bundle/hindent"]
 	path = bundle/hindent
 	url = https://github.com/chrisdone/hindent.git
+	ignore = dirty
 [submodule "bundle/vim-sneak"]
 	path = bundle/vim-sneak
 	url = https://github.com/justinmk/vim-sneak.git
+	ignore = dirty
 [submodule "bundle/vim-startify"]
 	path = bundle/vim-startify
 	url = https://github.com/mhinz/vim-startify.git
