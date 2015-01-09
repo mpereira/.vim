@@ -1,9 +1,11 @@
-nmap N <Plug>SneakPrevious
-nmap n <Plug>SneakNext
+" nmap N <Plug>SneakPrevious
+" nmap n <Plug>SneakNext
+nmap <expr> n sneak#is_sneaking() ? '<Plug>SneakNext' : 'n'
+nmap <expr> N sneak#is_sneaking() ? '<Plug>SneakPrevious' : 'N'
 
-nmap f <Plug>Sneak_s
-nmap F <Plug>Sneak_S
-xmap f <Plug>Sneak_s
-xmap F <Plug>Sneak_S
-omap f <Plug>Sneak_s
-omap F <Plug>Sneak_S
+nmap <leader>f <Plug>Sneak_s
+nmap <leader>F <Plug>Sneak_S
+xmap <leader>f <Plug>Sneak_s
+xmap <leader>F <Plug>Sneak_S
+omap <leader>f <Plug>Sneak_s
+omap <leader>F <Plug>Sneak_S
