@@ -1,8 +1,6 @@
-" TODO: Clear all mappings. Should I do this?
-" mapclear
-
-" ; -> :.
+" ; <-> :.
 nnoremap ; :
+nnoremap : ;
 
 " Toggle paste mode.
 nnoremap <leader>tp :set invpaste paste?<cr>
@@ -26,9 +24,8 @@ nnoremap K <nop>
 " Quick alternate buffer.
 nnoremap <leader>, <c-^>
 
-" <c-L> clear highlights
-nnoremap <silent> <c-l> :nohlsearch<cr>
-inoremap <c-l> <c-o>:nohlsearch<cr>
+" Clear search highlighting.
+nnoremap <silent> <leader>cl :nohlsearch<cr>
 
 " Help.
 nnoremap <leader>he :help<Space>
@@ -46,8 +43,8 @@ nnoremap <leader>vs <c-w>v<c-w>l
 nnoremap <leader>hs <c-w>s<c-w>j
 
 " Tabs.
-nnoremap <leader>( :tabprev<cr>
-nnoremap <leader>) :tabnext<cr>
+nnoremap <silent> <leader>( :tabprev<cr>
+nnoremap <silent> <leader>) :tabnext<cr>
 
 " Don't move on *
 " I'd use a function for this but Vim clobbers the last search when you're in
@@ -64,3 +61,19 @@ nnoremap zO zczO
 " Keep search matches in the middle of the window.
 nnoremap n nzzzv
 nnoremap N Nzzzv
+
+" Quickly move between splits.
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+
+" Quickly save.
+nnoremap <leader>w :w<CR>
+
+" Quickly quit.
+nnoremap <leader>q :q<CR>
+
+" Swap words to left and right.
+nnoremap <silent> <e "_yiw?\w\+\_W\+\%#<CR>:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>:nohls<cr>
+nnoremap <silent> >e "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\_W\+<CR>:nohls<cr>
