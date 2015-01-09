@@ -38,11 +38,9 @@ endf
 
 autocmd VimEnter * call AirlineInit()
 
-let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#hunks#non_zero_only         = 1
 let g:airline#extensions#branch#displayed_head_limit = 8
-
-
-let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#buffer_idx_mode     = 1
 
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
