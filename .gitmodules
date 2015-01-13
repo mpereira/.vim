@@ -382,3 +382,7 @@ ignore = dirty
 	path = bundle/vim-perl
 	url = https://github.com/vim-perl/vim-perl.git
 	ignore = dirty
+[submodule "bundle/cljfold.vim"]
+	path = bundle/cljfold.vim
+	url = https://github.com/gberenfield/cljfold.vim.git
+	ignore = dirty
