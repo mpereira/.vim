@@ -5,6 +5,7 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height        = 10
 let g:ctrlp_extensions        = ['tag', 'changes']
 let g:ctrlp_show_hidden       = 1
+let g:ctrlp_use_caching       = 0
 
 nnoremap <leader>cb :CtrlPBuffer<cr>
 nnoremap <leader>cc :CtrlPChange<cr>
