@@ -386,3 +386,7 @@ ignore = dirty
 	path = bundle/cljfold.vim
 	url = https://github.com/gberenfield/cljfold.vim.git
 	ignore = dirty
+[submodule "bundle/vim-projectlocal"]
+	path = bundle/vim-projectlocal
+	url = https://github.com/krisajenkins/vim-projectlocal.git
+	ignore = dirty
