@@ -13,6 +13,8 @@ vnoremap <F1> <ESC>
 " Use regular regular expressions.
 nnoremap / /\v
 vnoremap / /\v
+nnoremap ? ?\v
+vnoremap ? ?\v
 
 " Yank from cursor to EOL.
 nnoremap Y y$
@@ -80,6 +82,15 @@ nnoremap <silent> >e "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\
 
 " Toggle spell-checking.
 nnoremap <silent> <leader>sp :set spell!<cr>
+
+" Visual mode pressing * or # searches for the current selection
+" Super useful! From an idea by Michael Naumann
+vnoremap <silent> * :call VisualSelection('f', '')<CR>
+vnoremap <silent> # :call VisualSelection('b', '')<CR>
+
+" Plugin: vim-split-join
+noremap <Leader>J :SplitjoinJoin<CR>
+noremap <Leader>S :SplitjoinSplit<CR>
 
 " Plugin: vim-slamhound
 nnoremap <Leader>ns :Slamhound<CR>
