@@ -142,3 +142,11 @@ command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
 " Toggle spell check when entering/leaving insert mode.
 autocmd InsertEnter * setlocal spell
 autocmd InsertLeave * setlocal nospell
+
+" c Autowrap comments to textwidth.
+" r Autoinsert comment leader with <Enter>.
+" q Allow formatting of comments with :gq.
+" l Don't format already long lines.
+" n Recognize numbered lists.
+" 1 Don't break a line after a 1-letter word.
+set formatoptions=crqln1
