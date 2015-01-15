@@ -382,6 +382,10 @@ ignore = dirty
 	path = bundle/vim-perl
 	url = https://github.com/vim-perl/vim-perl.git
 	ignore = dirty
+[submodule "bundle/vim-clojure-sql"]
+	path = bundle/vim-clojure-sql
+	url = https://github.com/krisajenkins/vim-clojure-sql.git
+	ignore = dirty
 [submodule "bundle/cljfold.vim"]
 	path = bundle/cljfold.vim
 	url = https://github.com/gberenfield/cljfold.vim.git
@@ -389,4 +393,8 @@ ignore = dirty
 [submodule "bundle/vim-projectlocal"]
 	path = bundle/vim-projectlocal
 	url = https://github.com/krisajenkins/vim-projectlocal.git
+	ignore = dirty
+[submodule "bundle/vim-easy-align"]
+	path = bundle/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
 	ignore = dirty
