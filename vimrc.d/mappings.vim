@@ -80,3 +80,6 @@ nnoremap <silent> >e "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\
 
 " Toggle spell-checking.
 nnoremap <silent> <leader>sp :set spell!<cr>
+
+" Plugin: vim-slamhound
+nnoremap <Leader>ns :Slamhound<CR>

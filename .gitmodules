@@ -398,3 +398,6 @@ ignore = dirty
 	path = bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
 	ignore = dirty
+[submodule "bundle/vim-slamhound"]
+	path = bundle/vim-slamhound
+	url = https://github.com/guns/vim-slamhound.git
