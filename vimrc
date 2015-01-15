@@ -14,7 +14,6 @@ filetype plugin indent on " Enable filetype detection, filetype-specific
                           " indenting and filetype-specific plugins.
 
 set nocompatible          " disable vi compatibility
-set background=dark       " assume a dark background
 
 set modelines=0           " disable modelines (prevents a security exploit)
 
@@ -29,15 +28,26 @@ set tabstop=2             " tab width is 2 spaces
 set softtabstop=2         " counts 2 spaces when delete or backspace is used
 set shiftwidth=2          " indent with 2 spaces
 set expandtab             " expand tabs to spaces
-set textwidth=80          " 80 column lines.
 
-set smartindent           " use intelligent indentention
-set autoindent            " use indentention of previous line
+set textwidth=80          " 80 column lines.
+set colorcolumn=+1
+
+set smartindent           " use intelligent indentation
+set autoindent            " use indentation of previous line
+set copyindent            " use existing indents for new indents
+set shiftround            " always round indents to multiple of shiftwidth
+
+set nojoinspaces          " never join lines with two spaces"
 
 set foldmethod=syntax     " fold based on syntax
-set foldlevelstart=99     " fold based on syntax
+set foldlevelstart=0
 set foldnestmax=3         " deepest fold is 3 levels
 set nofoldenable          " dont fold by default
+
+set complete-=i           " exclude include files
+set complete-=t           " exclude tags
+set complete-=u           " exclude unloaded buffers
+set completeopt=menuone,longest,preview
 
 set clipboard=unnamed     " Yanked values are piped to the X window clipboard.
 set number                " show line numbers
@@ -60,22 +70,38 @@ set noswapfile            " no swap file
 set undofile              " persistent undo history
 set undodir=~/.vim/tmp    " don't save undo files locally
 
-" display tabs and trailing spaces
+" Display tabs and trailing spaces.
 set list
 set listchars=tab:»⋅,trail:⋅,nbsp:⋅
 
-set wildmenu                            " C-n and C-p scroll through matches
-set wildchar=<TAB>                      " start wild expansion in the command l ine using <TAB>
-set wildmode=list:longest               " cmdline " tab completion
-set wildignore=*.o,*.obj,*~,*.beam,.git " stuff to ignore when tab completing
+set wildmenu              " C-n and C-p scroll through matches
+set wildchar=<TAB>        " start wild expansion in the command line using <TAB>
+set wildmode=list:longest " tab completion
 
-" allow backspacing over everything in insert mode
+set wildignore+=.hg,.git,.svn                    " Version control
+set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " Image files
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " Compiled object files
+set wildignore+=*.spl                            " Compiled spelling word lists
+set wildignore+=*.sw?                            " Vim swap files
+set wildignore+=*.DS_Store                       " OSX
+set wildignore+=*.beam                           " Erlang byte code
+set wildignore+=*.luac                           " Lua byte code
+set wildignore+=*.pyc                            " Python byte code
+set wildignore+=*.class                          " Java byte code
+set wildignore+=target                           " Clojure/Leiningen
+set wildignore+=.vimtags
+set wildignore+=bundle
+set wildignore+=node_modules
+set wildignore+=bower_components
+
+" Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
 
-" store lots of :cmdline history
+" Store lots of :cmdline history.
 set history=1000
 
-" some stuff to get the mouse going in term
+" Some stuff to get the mouse going in term.
 set mouse=a
 set ttymouse=xterm2
 
@@ -92,11 +118,13 @@ if !has('gui_running')
   augroup END
 endif
 
-" display settings
+" Display settings.
 set t_Co=256
-set colorcolumn=81
 syntax on
+set background=dark " assume a dark background
 colorscheme jellybeans
+highlight ColorColumn ctermbg=darkgray guibg=darkgray
+hi Normal ctermbg=none
 
 au BufRead,BufNewFile *.escript       set filetype=erlang
 au BufRead,BufNewFile *gvimrc         set filetype=vim
@@ -128,16 +156,6 @@ function! SetCursorPosition()
     endif
   end
 endfunction
-
-" define :Lorem command to dump in a paragraph of lorem ipsum
-command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
-  \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-  \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-  \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-  \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-  \ fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non
-  \ proident, sunt in culpa qui officia deserunt mollit anim id est
-  \ laborum.
 
 " Toggle spell check when entering/leaving insert mode.
 autocmd InsertEnter * setlocal spell
