@@ -107,11 +107,18 @@ au BufRead,BufNewFile *.jsx.erb       setlocal filetype=javascript
 " Save file as root.
 command! -bar -nargs=0 W silent! exec "write !sudo tee % >/dev/null" | silent! edit!
 
-" keeping history data
-set viminfo='10,\"30,:20,%,n~/.vim/info
+" Sample viminfo for projects.
+" set viminfo=<10,%,'50,/100,:1000,@1000,f0,n~/path/to/project/.viminfo
 
-" jump to last cursor position when opening a file
-" dont do it when writing a commit log entry
+" Replacement for vim-projectlocal not handling 'viminfo' commands in project
+" local vimrcs.
+let project_vimrc_path = getcwd() . '/.vimrc'
+if filereadable(project_vimrc_path)
+  execute 'source ' . project_vimrc_path
+endif
+
+" Jump to last cursor position when opening a file. Don't do it when writing a
+" commit log entry.
 au BufReadPost * call SetCursorPosition()
 function! SetCursorPosition()
   if &filetype !~ 'commit\c'
