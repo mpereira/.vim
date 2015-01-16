@@ -357,6 +357,8 @@ ignore = dirty
 [submodule "bundle/vim-slamhound"]
 	path = bundle/vim-slamhound
 	url = https://github.com/guns/vim-slamhound.git
+	ignore = dirty
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+	ignore = dirty
