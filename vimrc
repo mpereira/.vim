@@ -168,3 +168,8 @@ autocmd InsertLeave * setlocal nospell
 " n Recognize numbered lists.
 " 1 Don't break a line after a 1-letter word.
 set formatoptions=crqln1
+
+" Load matchit.vim, but only if we haven't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
