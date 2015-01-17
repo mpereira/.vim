@@ -362,3 +362,6 @@ ignore = dirty
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
 	ignore = dirty
+[submodule "bundle/vim-speeddating"]
+	path = bundle/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git

@@ -1,3 +1,11 @@
+autocmd FileType haskell nnoremap <buffer> <leader>ru :GhciRange<CR>
+autocmd FileType haskell vnoremap <buffer> <leader>ru :GhciRange<CR>
+autocmd FileType haskell nnoremap <buffer> <leader>ru :GhciFile<CR>
+autocmd FileType haskell nnoremap <buffer> <leader>re :GhciReload<CR>
+
+autocmd FileType haskell nnoremap <buffer> K :HoogleInfo<CR>
+" autocmd FileType haskell vunmap   <buffer> K
+
 " ; <-> :.
 nnoremap ; :
 nnoremap : ;
@@ -94,3 +102,17 @@ noremap <Leader>S :SplitjoinSplit<CR>
 
 " Plugin: vim-slamhound
 nnoremap <Leader>ns :Slamhound<CR>
+
+" Plugin: bufexplorer
+" nnoremap <script> <silent> <unique> <Leader>be :BufExplorer<CR>
+
+" Plugin: NrrwRgn
+" xmap <unique> <Leader>nr <Plug>NrrwrgnDo
+" nmap <unique> <Leader>nr <Plug>NrrwrgnDo
+" xmap <unique> <Leader>Nr <Plug>NrrwrgnBangDo
+
+" Plugin: vim-speeddating
+nmap + <Plug>SpeedDatingUp
+nmap - <Plug>SpeedDatingDown
+xmap + <Plug>SpeedDatingUp
+xmap - <Plug>SpeedDatingDown

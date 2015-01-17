@@ -134,6 +134,7 @@
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors.git)
 - [vim-qargs](https://github.com/nelstrom/vim-qargs.git)
 - [vim-surround](https://github.com/tpope/vim-surround.git)
+- [vim-speeddating](https://github.com/tpope/vim-speeddating.git)
 
 ### Git
 
