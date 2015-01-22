@@ -145,6 +145,7 @@
 
 ### Database
 
+- [dbext](https://github.com/vim-scripts/dbext.vim)
 - [SQLUtilities](https://github.com/vim-scripts/SQLUtilities.git)
 - [vim-pipe](https://github.com/krisajenkins/vim-pipe.git)
 - [vim-postgresql-syntax](https://github.com/krisajenkins/vim-postgresql-syntax.git)

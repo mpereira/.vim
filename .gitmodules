@@ -378,3 +378,6 @@ ignore = dirty
 	path = bundle/ri.vim
 	url = https://github.com/mpereira/ri.vim.git
 	ignore = dirty
+[submodule "bundle/dbext.vim"]
+	path = bundle/dbext.vim
+	url = https://github.com/krisajenkins/dbext.vim.git
