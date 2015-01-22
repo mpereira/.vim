@@ -222,10 +222,6 @@
 	path = bundle/vim-textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
 	ignore = dirty
-[submodule "bundle/ri.vim"]
-	path = bundle/ri.vim
-	url = https://github.com/danchoi/ri.vim.git
-	ignore = dirty
 [submodule "bundle/vim-scratch"]
 	path = bundle/vim-scratch
 	url = https://github.com/duff/vim-scratch.git
