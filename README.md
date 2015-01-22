@@ -143,6 +143,12 @@
 - [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter.git)
 
+### Database
+
+- [SQLUtilities](https://github.com/vim-scripts/SQLUtilities.git)
+- [vim-pipe](https://github.com/krisajenkins/vim-pipe.git)
+- [vim-postgresql-syntax](https://github.com/krisajenkins/vim-postgresql-syntax.git)
+
 ### Text objects
 
 - [vim-textobj-rubyblock](https://github.com/nelstrom/vim-textobj-rubyblock.git)
