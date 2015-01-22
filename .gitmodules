@@ -374,3 +374,7 @@ ignore = dirty
 	path = bundle/vim-pipe
 	url = https://github.com/krisajenkins/vim-pipe.git
 	ignore = dirty
+[submodule "bundle/ri.vim"]
+	path = bundle/ri.vim
+	url = https://github.com/mpereira/ri.vim.git
+	ignore = dirty
