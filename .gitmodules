@@ -365,12 +365,16 @@ ignore = dirty
 [submodule "bundle/vim-speeddating"]
 	path = bundle/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating.git
+	ignore = dirty
 [submodule "bundle/SQLUtilities"]
 	path = bundle/SQLUtilities
 	url = https://github.com/vim-scripts/SQLUtilities.git
+	ignore = dirty
 [submodule "bundle/vim-postgresql-syntax"]
 	path = bundle/vim-postgresql-syntax
 	url = https://github.com/krisajenkins/vim-postgresql-syntax.git
+	ignore = dirty
 [submodule "bundle/vim-pipe"]
 	path = bundle/vim-pipe
 	url = https://github.com/krisajenkins/vim-pipe.git
+	ignore = dirty
