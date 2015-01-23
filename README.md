@@ -170,7 +170,7 @@
 
 ### Miscellaneous
 
-- [delimitMate](https://github.com/Raimondi/delimitMate.git)
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 - [eclim](https://github.com/ervandew/eclim/tree/master/org.eclim.vimplugin/vim/eclim)
 - [floobits-vim](https://github.com/Floobits/floobits-vim)
 - [supertab](https://github.com/ervandew/supertab.git)
