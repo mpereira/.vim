@@ -145,7 +145,7 @@
 
 ### Database
 
-- [dbext](https://github.com/vim-scripts/dbext.vim)
+- [dbext](https://github.com/vim-scripts/dbext.vim.git)
 - [SQLUtilities](https://github.com/vim-scripts/SQLUtilities.git)
 - [vim-pipe](https://github.com/krisajenkins/vim-pipe.git)
 - [vim-postgresql-syntax](https://github.com/krisajenkins/vim-postgresql-syntax.git)
@@ -170,7 +170,8 @@
 
 ### Miscellaneous
 
-- [auto-pairs](https://github.com/jiangmiao/auto-pairs)
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs.git)
+- [dash](https://github.com/rizzatti/dash.vim.git)
 - [eclim](https://github.com/ervandew/eclim/tree/master/org.eclim.vimplugin/vim/eclim)
 - [floobits-vim](https://github.com/Floobits/floobits-vim)
 - [supertab](https://github.com/ervandew/supertab.git)

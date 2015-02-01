@@ -386,3 +386,6 @@ ignore = dirty
 	path = bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
 	ignore = dirty
+[submodule "bundle/dash.vim"]
+	path = bundle/dash.vim
+	url = https://github.com/rizzatti/dash.vim
