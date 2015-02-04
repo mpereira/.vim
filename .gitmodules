@@ -389,3 +389,8 @@ ignore = dirty
 [submodule "bundle/dash.vim"]
 	path = bundle/dash.vim
 	url = https://github.com/rizzatti/dash.vim
+	ignore = dirty
+[submodule "bundle/vim-eastwood"]
+	path = bundle/vim-eastwood
+	url = https://github.com/venantius/vim-eastwood
+	ignore = dirty
