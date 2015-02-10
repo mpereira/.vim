@@ -380,7 +380,7 @@ ignore = dirty
 	ignore = dirty
 [submodule "bundle/dbext.vim"]
 	path = bundle/dbext.vim
-	url = https://github.com/krisajenkins/dbext.vim.git
+	url = https://github.com/vim-scripts/dbext.vim.git
 	ignore = dirty
 [submodule "bundle/auto-pairs"]
 	path = bundle/auto-pairs
