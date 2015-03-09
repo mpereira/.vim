@@ -60,6 +60,7 @@
 - [vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax.git)
 - [vim-javascript](https://github.com/pangloss/vim-javascript.git)
 - [vim-jsx](https://github.com/mxw/vim-jsx.git)
+- [vim-node](https://github.com/moll/vim-node)
 - [VimJSXHint](https://github.com/jordwalke/VimJSXHint.git)
 
 #### Ruby

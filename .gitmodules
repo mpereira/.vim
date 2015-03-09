@@ -394,3 +394,6 @@ ignore = dirty
 	path = bundle/vim-eastwood
 	url = https://github.com/venantius/vim-eastwood
 	ignore = dirty
+[submodule "bundle/vim-node"]
+	path = bundle/vim-node
+	url = https://github.com/moll/vim-node
