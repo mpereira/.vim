@@ -397,3 +397,8 @@ ignore = dirty
 [submodule "bundle/vim-node"]
 	path = bundle/vim-node
 	url = https://github.com/moll/vim-node
+	ignore = dirty
+[submodule "bundle/vim-cljfmt"]
+	path = bundle/vim-cljfmt
+	url = https://github.com/venantius/vim-cljfmt.git
+	ignore = dirty
