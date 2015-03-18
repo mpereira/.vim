@@ -38,6 +38,7 @@
 - [vim-classpath](https://github.com/tpope/vim-classpath.git)
 - [vim-cljfmt](https://github.com/venantius/vim-cljfmt)
 - [vim-clojure-static](https://github.com/guns/vim-clojure-static.git)
+- [vim-eastwood](https://github.com/venantius/vim-eastwood)
 - [vim-fireplace](https://github.com/tpope/vim-fireplace.git)
 - [vim-leiningen](https://github.com/tpope/vim-leiningen.git)
 - [vim-sexp-mapping-for-regular-people](https://github.com/tpope/vim-sexp-mappings-for-regular-people.git)
