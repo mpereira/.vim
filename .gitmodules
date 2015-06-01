@@ -402,3 +402,6 @@ ignore = dirty
 	path = bundle/vim-cljfmt
 	url = https://github.com/venantius/vim-cljfmt.git
 	ignore = dirty
+[submodule "bundle/vim-dirvish"]
+	path = bundle/vim-dirvish
+	url = https://github.com/justinmk/vim-dirvish

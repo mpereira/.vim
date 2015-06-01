@@ -123,6 +123,7 @@
 - [bufexplorer.zip](https://github.com/vim-scripts/bufexplorer.zip.git)
 - [ctrlp.vim](https://github.com/kien/ctrlp.vim.git)
 - [nerdtree](https://github.com/scrooloose/nerdtree.git)
+- [vim-dirvish](https://github.com/justinmk/vim-dirvish)
 
 ### Moving around text
 
