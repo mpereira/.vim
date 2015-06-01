@@ -123,6 +123,7 @@
 - [bufexplorer.zip](https://github.com/vim-scripts/bufexplorer.zip.git)
 - [ctrlp.vim](https://github.com/kien/ctrlp.vim.git)
 - [nerdtree](https://github.com/scrooloose/nerdtree.git)
+- [tagbar](https://github.com/majutsushi/tagbar.git)
 - [vim-dirvish](https://github.com/justinmk/vim-dirvish)
 
 ### Moving around text
@@ -132,13 +133,18 @@
 
 ### Manipulating text
 
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs.git)
 - [NrrwRgn](https://github.com/chrisbra/NrrwRgn.git)
 - [tcomment_vim](https://github.com/tomtom/tcomment_vim.git)
 - [vim-easy-align](https://github.com/junegunn/vim-easy-align.git)
+- [vim-endwise](https://github.com/tpope/vim-endwise.git)
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors.git)
 - [vim-qargs](https://github.com/nelstrom/vim-qargs.git)
-- [vim-surround](https://github.com/tpope/vim-surround.git)
+- [vim-repeat](https://github.com/tpope/vim-repeat.git)
+- [vim-snipmate](https://github.com/SirVer/ultisnips)
+- [vim-snippets](https://github.com/honza/vim-snippets.git)
 - [vim-speeddating](https://github.com/tpope/vim-speeddating.git)
+- [vim-surround](https://github.com/tpope/vim-surround.git)
 
 ### Git
 
@@ -172,30 +178,28 @@
 
 - [vim-unimpaired](https://github.com/tpope/vim-unimpaired.git)
 
+### Appearance
+
+- [focus.vim](https://github.com/merlinrebrovic/focus.vim.git)
+- [supertab](https://github.com/ervandew/supertab.git)
+- [syntastic](https://github.com/scrooloose/syntastic.git)
+- [tmuxline.vim](https://github.com/edkolev/tmuxline.vim.git)
+- [VimSplitBalancer](https://github.com/jordwalke/VimSplitBalancer.git)
+
 ### Miscellaneous
 
-- [auto-pairs](https://github.com/jiangmiao/auto-pairs.git)
 - [dash](https://github.com/rizzatti/dash.vim.git)
 - [eclim](https://github.com/ervandew/eclim/tree/master/org.eclim.vimplugin/vim/eclim)
 - [floobits-vim](https://github.com/Floobits/floobits-vim)
-- [supertab](https://github.com/ervandew/supertab.git)
-- [syntastic](https://github.com/scrooloose/syntastic.git)
-- [tagbar](https://github.com/majutsushi/tagbar.git)
-- [tmuxline.vim](https://github.com/edkolev/tmuxline.vim.git)
 - [vim-dispatch](https://github.com/tpope/vim-dispatch.git)
 - [vim-easytags](https://github.com/xolox/vim-easytags.git)
-- [vim-endwise](https://github.com/tpope/vim-endwise.git)
 - [vim-pasta](https://github.com/sickill/vim-pasta.git)
 - [vim-pathogen](https://github.com/tpope/vim-pathogen.git)
 - [vim-projectlocal](https://github.com/krisajenkins/vim-projectlocal.git)
-- [vim-repeat](https://github.com/tpope/vim-repeat.git)
 - [vim-scratch](https://github.com/duff/vim-scratch.git)
 - [vim-slime](https://github.com/jpalardy/vim-slime.git)
-- [vim-snipmate](https://github.com/SirVer/ultisnips)
-- [vim-snippets](https://github.com/honza/vim-snippets.git)
 - [vim-startify](https://github.com/mhinz/vim-startify.git)
 - [vimshell.vim](https://github.com/Shougo/vimshell.vim.git)
-- [VimSplitBalancer](https://github.com/jordwalke/VimSplitBalancer.git)
 
 ### Support
 

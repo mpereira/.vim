@@ -405,3 +405,6 @@ ignore = dirty
 [submodule "bundle/vim-dirvish"]
 	path = bundle/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish
+[submodule "bundle/focus.vim"]
+	path = bundle/focus.vim
+	url = https://github.com/merlinrebrovic/focus.vim.git
