@@ -138,6 +138,7 @@
 - [tcomment_vim](https://github.com/tomtom/tcomment_vim.git)
 - [vim-easy-align](https://github.com/junegunn/vim-easy-align.git)
 - [vim-endwise](https://github.com/tpope/vim-endwise.git)
+- [vim-expand-region](https://github.com/terryma/vim-expand-region.git)
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors.git)
 - [vim-qargs](https://github.com/nelstrom/vim-qargs.git)
 - [vim-repeat](https://github.com/tpope/vim-repeat.git)
