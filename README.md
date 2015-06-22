@@ -150,8 +150,9 @@
 ### Git
 
 - [Gist.vim](https://github.com/vim-scripts/Gist.vim.git)
-- [gitv](https://github.com/vim-scripts/gitv.git)
+- [gitv](https://github.com/gregsexton/gitv.git)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
+- [vim-git](https://github.com/tpope/vim-git.git)
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter.git)
 
 ### Database
