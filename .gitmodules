@@ -401,15 +401,20 @@ ignore = dirty
 [submodule "bundle/vim-dirvish"]
 	path = bundle/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish
+	ignore = dirty
 [submodule "bundle/focus.vim"]
 	path = bundle/focus.vim
 	url = https://github.com/merlinrebrovic/focus.vim.git
+	ignore = dirty
 [submodule "bundle/vim-expand-region"]
 	path = bundle/vim-expand-region
 	url = https://github.com/terryma/vim-expand-region.git
+	ignore = dirty
 [submodule "bundle/gitv"]
 	path = bundle/gitv
 	url = https://github.com/gregsexton/gitv.git
+	ignore = dirty
 [submodule "bundle/vim-git"]
 	path = bundle/vim-git
 	url = https://github.com/tpope/vim-git.git
+	ignore = dirty
