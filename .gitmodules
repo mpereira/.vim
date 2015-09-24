@@ -418,3 +418,6 @@ ignore = dirty
 	path = bundle/vim-git
 	url = https://github.com/tpope/vim-git.git
 	ignore = dirty
+[submodule "bundle/switch.vim"]
+	path = bundle/switch.vim
+	url = https://github.com/AndrewRadev/switch.vim.git
