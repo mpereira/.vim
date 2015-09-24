@@ -421,3 +421,7 @@ ignore = dirty
 [submodule "bundle/switch.vim"]
 	path = bundle/switch.vim
 	url = https://github.com/AndrewRadev/switch.vim.git
+	ignore = dirty
+[submodule "bundle/idris-vim"]
+	path = bundle/idris-vim
+	url = https://github.com/idris-hackers/idris-vim.git
