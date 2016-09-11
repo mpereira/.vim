@@ -1,8 +1,16 @@
+if exists('g:loaded_vimrc') || &compatible
+  finish
+else
+  let g:loaded_vimrc = 1
+endif
+
 let g:mapleader = ','
+let g:maplocalleader = ','
 
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'eclim')
 call add(g:pathogen_disabled, 'floobits-vim')
+call add(g:pathogen_disabled, 'VimJSXHint')
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 runtime bundle/hindent/vim/hindent.vim
@@ -31,6 +39,7 @@ set expandtab             " expand tabs to spaces
 
 set textwidth=80          " 80 column lines.
 set colorcolumn=+1
+set synmaxcol=2048        " Prevent large file syntax highlighting slowdown.
 
 set smartindent           " use intelligent indentation
 set autoindent            " use indentation of previous line
@@ -69,6 +78,8 @@ set lazyredraw            " do not redraw while running macros
 set noswapfile            " no swap file
 set undofile              " persistent undo history
 set undodir=~/.vim/tmp    " don't save undo files locally
+set tags=./tags;          " search for a tags file upward, starting from the
+                          " directory of the current file.
 
 " Display tabs and trailing spaces.
 set list
@@ -94,6 +105,8 @@ set wildignore+=.vimtags
 set wildignore+=bundle
 set wildignore+=node_modules
 set wildignore+=bower_components
+set wildignore+=.stack-work
+set wildignore+=.vagrant
 
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
@@ -103,7 +116,9 @@ set history=1000
 
 " Some stuff to get the mouse going in term.
 set mouse=a
-set ttymouse=xterm2
+if !has('nvim')
+  set ttymouse=xterm2
+endif
 
 " When you're pressing Escape to leave insert mode in the terminal, it will by
 " default take a second or another keystroke to leave insert mode completely
@@ -114,7 +129,7 @@ if !has('gui_running')
   augroup FastEscape
     autocmd!
     au InsertEnter * set timeoutlen=0
-    au InsertLeave * set timeoutlen=1000
+    au InsertLeave * set timeoutlen=500
   augroup END
 endif
 
@@ -167,7 +182,8 @@ autocmd InsertLeave * setlocal nospell
 " l Don't format already long lines.
 " n Recognize numbered lists.
 " 1 Don't break a line after a 1-letter word.
-set formatoptions=crqln1
+" j Delete comment character when joining commented lines.
+set formatoptions=crqln1j
 
 " Load matchit.vim, but only if we haven't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''

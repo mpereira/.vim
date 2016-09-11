@@ -1,1 +1,1 @@
-let g:ri_no_mappings=1
+let g:ri_no_mappings = 1
