@@ -29,9 +29,9 @@ LEININGEN_INSTALLATION_BIN_PATH := /usr/bin/lein
         vimproc.vim
 
 vim:
-	wget -nc ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2 -P /tmp
-	tar -xjvf /tmp/vim-7.4.tar.bz2 -C /tmp
-	cd /tmp/vim74 && ./configure \
+	wget -nc https://github.com/macvim-dev/macvim/archive/snapshot-104.tar.gz -P /tmp
+	tar -xjvf /tmp/snapshot-104.tar.gz -C /tmp
+	cd /tmp/macvim-snapshot-104 && ./configure \
 		--enable-fail-if-missing \
 		--enable-luainterp \
 		--enable-perlinterp \
@@ -39,18 +39,19 @@ vim:
 		--enable-python3interp \
 		--enable-rubyinterp \
 		--enable-cscope \
+		--enable-gui=auto \
 		--disable-netbeans \
 		--enable-multibyte \
 		--with-luajit \
 		--with-features=huge \
 		--with-compiledby='Murilo Pereira <murilo@murilopereira.com>'
-	cp patches/os_unix_c_830_13_error_conflicting_types_for_sigaltstack_fix.diff /tmp/vim74
-	cd /tmp/vim74 && git apply os_unix_c_830_13_error_conflicting_types_for_sigaltstack_fix.diff
-	cd /tmp/vim74 && make
-	cd /tmp/vim74 && sudo make install
+	# cp patches/os_unix_c_830_13_error_conflicting_types_for_sigaltstack_fix.diff /tmp/macvim-snapshot-73
+	# cd /tmp/macvim-snapshot-73 && git apply os_unix_c_830_13_error_conflicting_types_for_sigaltstack_fix.diff
+	cd /tmp/macvim-snapshot-104 && make
+	cd /tmp/macvim-snapshot-104 && sudo make install
 
 vimproc.vim:
-	cd bundle/vimproc.vim && make
+	cd bundle/vimproc.vim && make -f make_mac.mak
 
 sbt:
 	wget $(SBT_DEB_URL) -P /tmp
