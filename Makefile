@@ -1,5 +1,5 @@
 GIT                             := git
-VIM                             := vim
+VIM                             := mvim -v
 
 SBT_VERSION                     := 0.13.0
 SBT_RELEASE_DEB                 := sbt.deb
