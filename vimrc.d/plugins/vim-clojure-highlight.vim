@@ -1,0 +1,1 @@
+autocmd Syntax clojure EnableSyntaxExtension

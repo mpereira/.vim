@@ -430,3 +430,7 @@ ignore = dirty
 	path = /Users/mpereira/.vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
 	ignore = dirty
+[submodule "bundle/vim-clojure-highlight"]
+	path = bundle/vim-clojure-highlight
+	url = https://github.com/guns/vim-clojure-highlight
+	ignore = dirty
