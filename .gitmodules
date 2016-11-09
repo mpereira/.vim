@@ -434,3 +434,11 @@ ignore = dirty
 	path = bundle/vim-clojure-highlight
 	url = https://github.com/guns/vim-clojure-highlight
 	ignore = dirty
+[submodule "bundle/Align"]
+	path = bundle/Align
+	url = https://github.com/vim-scripts/Align.git
+	ignore = dirty
+[submodule "bundle/vim-abolish"]
+	path = bundle/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
+	ignore = dirty
